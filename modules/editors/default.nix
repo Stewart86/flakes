@@ -49,4 +49,5 @@
   };
 
   home.file.".config/nvim".source = ./astronvim;
+  home.file.".config/test".source = ./astronvim;
 }
