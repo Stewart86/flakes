@@ -1,6 +1,21 @@
-Adapted from [ruixi-rebirth](https://github.com/ruixi-rebirth/flakes)
+Adapted from [ruixi-rebirth](https://github.com/ruixi-rebirth/flakes) minimal install version with additional to some personal applications.
 
-0. Prepare a 64-bit nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) and burn it, then enter the live system. Suppose I have divided two partitions `/dev/vda1` `/dev/vda2`
+## Status
+
+Currently this project can be run properly most of the time, except for some unknown bug that causes gray screen with only mouse cursor displayed. Additional testing required for bug fix.
+Temporary solution is to exit Hyprland (ALT+SHIFT+Q) and run `Hyprland` in tty. After this some applications systemd service might have failed. Just reset it and execute the applications again.
+
+## Applications included
+
+[TBA]
+
+## Folder Structure and customisation
+
+[TBA]
+
+## Setup and Install
+
+0. Prepare a 64-bit nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) and burn it, then enter the live system.
 
 1. Partition disk (reference [from](https://nixos.org/manual/nixos/stable/index.html#sec-installation-manual-partitioning-formatting))
 
@@ -69,3 +84,17 @@ reboot
 ```
 
 10. Enjoy it!
+
+## Cleanup
+
+After successfully installed and booted into Hyprland, it is advisable to move the flake configs to your home folder so you don't have to edit in with sudo rights.
+
+```bash
+cp /etc/nixos/Flakes/ ~/Flakes
+```
+
+After making your changes all you need is in the root folder of configs
+
+```bash
+sudo nixos-rebuild switch --flake .#laptop
+```
