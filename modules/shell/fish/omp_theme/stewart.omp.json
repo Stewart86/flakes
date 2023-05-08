@@ -1,0 +1,209 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{ if or .Root .Segments.Git.RepoName }}[ {{ if .Root }}Admin{{ end }}{{ if and .Root .Segments.Git.RepoName }}@{{ end }}{{ if .Segments.Git.RepoName }}{{ .Segments.Git.RepoName }}{{ end }} ]{{ end }} {{ .Folder }}",
+  "version": 2,
+  "final_space": true,
+  "palette": {
+    "teal": "#94e2d5",
+    "flamingo": "#f2cdcd",
+    "mauve": "#cba6f7",
+    "pink": "#f5c2e7",
+    "red": "#f38ba8",
+    "peach": "#fab387",
+    "green": "#a6e3a1",
+    "yellow": "#f9e2af",
+    "blue": "#89b4fa",
+    "gray": "#6c7086",
+    "selection": "#313244",
+    "foreground": "p:selection"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "diamond",
+          "foreground": "p:foreground",
+          "background": "p:blue",
+          "leading_diamond": "\ue0b6",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+        },
+        {
+          "type": "session",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "p:foreground",
+          "background": "p:mauve",
+          "template": " {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }} "
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:foreground",
+          "background": "p:red",
+          "template": " \ue5ff {{ .Path }} ",
+          "properties": {
+            "folder_icon": "\uf115",
+            "folder_separator_icon": " \ue0b1 ",
+            "home_icon": " ",
+            "style": "agnoster",
+            "mapped_locations": {
+              "~/github/": " ",
+              "~/python_codes/": " ",
+              "~/rust_codes/": " ",
+              "~/javascript_codes/": " "
+            }
+          }
+        },
+        {
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:foreground",
+          "background": "p:yellow",
+          "template": " \uf0e7 "
+        },
+        {
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:foreground",
+          "background": "p:blue",
+          "template": " {{ .Name }} ",
+          "properties": {
+            "mapped_shell_names": {
+              "bash": "\uebca",
+              "fish": "\udb80\ude3a",
+              "pwsh": ""
+            }
+          }
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:foreground",
+          "background": "p:teal",
+          "template": " {{ if eq .Env.name \"nix-shell-env\" }}  shell activate  {{ end }}"
+        },
+        {
+          "type": "executiontime",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:teal",
+          "background": "p:gray",
+          "template": " <#94e2d5></> {{ .FormattedMs }} ",
+          "properties": {
+            "threshold": 150,
+            "style": "austin"
+          }
+        },
+        {
+          "type": "exit",
+          "style": "diamond",
+          "foreground": "p:foreground",
+          "background": "p:green",
+          "trailing_diamond": "",
+          "template": "{{ if eq .Code 0 }}  {{ end }}",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "exit",
+          "style": "diamond",
+          "foreground": "p:foreground",
+          "background": "p:red",
+          "trailing_diamond": "",
+          "template": "{{ if ne .Code 0 }} \uf00d {{ .Code }}{{ if (ne .Meaning (toString .Code)) }} - {{ .Meaning }}{{else}}{{ end }} {{ end }}"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "docker",
+          "style": "diamond",
+          "trailing_diamond": "\uE0B4 ",
+          "leading_diamond": "  \uE0B6",
+          "background": "transparent",
+          "foreground": "#0B59E7",
+          "template": "  {{ .Context }} "
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "background": "transparent",
+          "foreground": "#906cff",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "background": "transparent",
+          "foreground": "#6CA35E",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "npm",
+          "style": "plain",
+          "background": "transparent",
+          "foreground": "#ffeb3b",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "rust",
+          "style": "plain",
+          "background": "transparent",
+          "foreground": "#99908a",
+          "template": "  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "trailing_diamond": "\uE0B4 ",
+          "leading_diamond": "  \uE0B6",
+          "foreground": "#ffeb3b",
+          "background": "transparent",
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "properties": {
+            "fetch_status": true,
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true
+          }
+        },
+        {
+          "type": "time",
+          "style": "powerline",
+          "foreground": "#999999",
+          "properties": {
+            "time_format": "󱛡 15:04 (01/02)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#888888",
+          "template": "<#66CDAA>\u276f</><#76EEC6>\u276f</><#7FFFD4>\u276f</> "
+        }
+      ]
+    }
+  ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#888888",
+    "template": "<#66CDAA>\u276f</><#76EEC6>\u276f</><#7FFFD4>\u276f</> "
+  }
+}
