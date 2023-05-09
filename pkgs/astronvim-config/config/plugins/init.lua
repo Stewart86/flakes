@@ -65,6 +65,7 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     build = "cd app && npm install",
+    event = "BufEnter *.md *.mdx *.markdown",
   },
 }
 -- to be included
