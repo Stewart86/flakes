@@ -1,7 +1,7 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
-  config = {
+  opts = {
     sources = {
       -- you must download code formatter by yourself!
       require("null-ls").builtins.formatting.stylua,

@@ -15,7 +15,7 @@ return {
   },
   {
     "eandrju/cellular-automaton.nvim",
-    opt = true,
+    opts = true,
     lazy = true,
     cmd = "CellularAutomaton",
     keys = {
