@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs = {
@@ -12,8 +12,8 @@
       withNodeJs = true;
       withRuby = false;
 
-      extraPackages = with pkgs; [ ];
-      plugins = with pkgs.vimPlugins; [ ];
+      # extraPackages = with pkgs; [ ];
+      # plugins = with pkgs.vimPlugins; [ ];
     };
   };
   home = {
@@ -48,6 +48,5 @@
     ];
   };
 
-  home.file.".config/nvim".source = ./astronvim;
-  home.file.".config/test".source = ./astronvim;
+  home.file.".config/nvim".source = pkgs.astronvim-config;
 }

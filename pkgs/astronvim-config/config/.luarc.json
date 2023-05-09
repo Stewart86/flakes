@@ -1,0 +1,12 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "PACKER_BOOTSTRAP",
+        "astronvim",
+        "astronvim_installation",
+        "vim",
+        "bit",
+        "C",
+        "packer_plugins"
+    ]
+}

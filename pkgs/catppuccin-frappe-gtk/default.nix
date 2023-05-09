@@ -1,6 +1,6 @@
 { lib, stdenv, fetchzip, pkgs, ... }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "cattpuccin-frappe-gtk";
   version = "0.2.7";
 

@@ -76,6 +76,17 @@ let
 
     socat - UNIX-CONNECT:/tmp/hypr/$(echo $HYPRLAND_INSTANCE_SIGNATURE)/.socket2.sock | while read line; do border_color $line; done
   '';
+
+  systemd_reset = pkgs.writeShellScriptBin "systemd_reset" ''
+    swww kill
+    systemctl --user stop graphical-session.target
+    systemctl --user stop hyprland-session.target
+    systemctl --user daemon-reload
+    systemctl --user reset-failed
+    systemctl home-manager-stewart.service
+    systemctl daemon-reload
+    systemctl reset-failed
+  '';
 in
 {
   home.packages = [
@@ -87,5 +98,6 @@ in
     default_wall
     launch_waybar
     border_color
+    systemd_reset
   ];
 }

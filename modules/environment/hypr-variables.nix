@@ -13,6 +13,7 @@
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
       CLUTTER_BACKEND = "wayland";
+      WLR_DRM_DEVICES = "/dev/dri/card0";
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_DESKTOP = "Hyprland";
       XDG_CACHE_HOME = "\${HOME}/.cache";

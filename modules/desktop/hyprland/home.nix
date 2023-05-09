@@ -6,7 +6,7 @@
     bash = {
       initExtra = ''
         if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-          Hyprland
+          exec Hyprland
         fi
       '';
     };
@@ -126,9 +126,9 @@
 
       bind = $mainMod, Return, exec, kitty fish
       bind = $mainMod SHIFT, Return, exec, kitty --class="termfloat" fish
+      bind = $mainMod, Q, killactive,
       bind = $mainMod SHIFT, P, killactive,
       bind = $mainMod SHIFT, Q, exit,
-      bind = $mainMod SHIFT, ~, exec, systemd --user restart hyprland-session.target && systemd --user restart graphical-session.target
       bind = $mainMod SHIFT, Space, togglefloating,
       bind = $mainMod,F,fullscreen
       bind = $mainMod,Y,pin
@@ -312,22 +312,17 @@
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
 
-      #-----------------------#
-      # wall(by swww service) #
-      #-----------------------#
-      # exec-once = default_wall 
-
       #------------#
       # auto start #
       #------------#
-      exec-once = hyprctl dispatch workspace 2
       exec-once = launch_waybar &
       exec-once = mako &
       exec-once = border_color &
       exec-once = nm-applet --indicator &
-
-      exec-once = wl-paste --type text --watch cliphist store #Stores only text data
-      exec-once = wl-paste --type image --watch cliphist store #Stores only image data
+      exec-once = default_wall 
+      exec-once = hyprctl dispatch workspace 2
+      exec-once = wl-paste --type text --watch cliphist store
+      exec-once = wl-paste --type image --watch cliphist store
 
       #---------------#
       # windows rules #
@@ -373,6 +368,9 @@
       windowrule=monitor eDP-1, title:Mail
       windowrule=monitor eDP-1, title:youtube-music
       windowrule=monitor eDP-1, musicfox
+      windowrule=monitor eDP-1, title:Slack
+      windowrule=monitor eDP-1, title:Telegram
+      windowrule=monitor eDP-1, title:WhatsApp
     '';
   };
 }
