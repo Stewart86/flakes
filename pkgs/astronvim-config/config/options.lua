@@ -26,7 +26,7 @@ return {
       copy = {
         ["+"] = "wl-copy",
         ["*"] = "wl-copy",
-    },
+      },
       paste = {
         ["+"] = "wl-paste --no-newline",
         ["*"] = "wl-paste --no-newline",
@@ -39,5 +39,9 @@ return {
     gitblame_message_template = "          : <author> 🕒 <date> 📝 <summary>",
     diagnostic_enable_virtual_text = false,
     gruvbox_material_background = "hard",
-  }
+
+    -- markdown preview
+    mkdp_browser = "microsoft-edge",
+    mkdp_echo_preview_url = 1,
+  },
 }
