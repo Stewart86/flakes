@@ -2,11 +2,11 @@ return {
   {
     "williamboman/mason.nvim",
     config = function()
-      require("mason").setup({
+      require("mason").setup {
         ui = {
           border = "rounded",
         },
-      })
+      }
     end,
   },
   {
@@ -38,7 +38,7 @@ return {
     "f-person/git-blame.nvim",
     event = "BufEnter",
   },
-  { "https://git.sr.ht/~whynothugo/lsp_lines.nvim", event = "LspAttach", opts = {} },
+  { "https://git.sr.ht/~whynothugo/lsp_lines.nvim", event = "LspAttach",          opts = {} },
   {
     "willothy/flatten.nvim",
     opts = {},
@@ -62,6 +62,7 @@ return {
       },
     },
   },
+  { "iamcco/markdown-preview.nvim",                 cmd = "cd app && npm install" },
 }
 -- to be included
 -- andythigpen/nvim-coverage
