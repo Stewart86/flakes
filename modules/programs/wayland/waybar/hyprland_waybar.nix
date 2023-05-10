@@ -183,6 +183,7 @@
           "battery"
           "custom/powermenu"
           "tray"
+          "custom/notifications"
         ];
         "custom/launcher" = {
           "format" = " ";
