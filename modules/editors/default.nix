@@ -12,8 +12,8 @@
       withNodeJs = true;
       withRuby = false;
 
-      # extraPackages = with pkgs; [ ];
-      plugins = with pkgs.vimPlugins; [ markdown-preview-nvim ];
+      extraPackages = with pkgs; [ nodePackages_latest.yarn ];
+      # plugins = with pkgs.vimPlugins; [];
     };
   };
   home = {
