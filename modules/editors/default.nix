@@ -23,7 +23,6 @@
       nodePackages_latest.typescript-language-server
       nodePackages_latest.vscode-langservers-extracted
       nodePackages_latest.bash-language-server
-      nodePackages_latest.tailwindcss
       nodePackages.jsonlint
       nil
       rnix-lsp
