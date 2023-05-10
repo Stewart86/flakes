@@ -19,7 +19,6 @@
   home = {
     packages = with pkgs; [
       #-- LSP --#
-      nodePackages_latest.yarn
       nodePackages_latest.typescript
       nodePackages_latest.typescript-language-server
       nodePackages_latest.vscode-langservers-extracted
