@@ -78,19 +78,20 @@
         fullscreen_opacity = 1.0
         rounding = 3
         blur = yes 
-        blur_size = 3
+        blur_size = 5
         blur_passes = 1
         blur_new_optimizations = true
         blur_xray = true
 
-        drop_shadow = false
+        drop_shadow = true
         shadow_range = 4
-        shadow_render_power = 3
+        shadow_render_power = 2
         shadow_ignore_window = true
         dim_inactive = true
         dim_strength = 0.2
         blur_ignore_opacity = false
         col.shadow = rgba(1a1a1aee)
+        col.shadow_inactive = rgba(1a1a1a88)
       }
 
       animations {
@@ -328,49 +329,81 @@
       # windows rules #
       #---------------#
       #`hyprctl clients` get class、title...
+
+      # Kitty
       windowrule=animation slide right,kitty
+      
+      # pavucontrol
       windowrule=float,pavucontrol
-      windowrule=float,danmufloat
-      windowrule=float,imv
-      windowrule=float,mpv
-      windowrule=float,ncmpcpp
-      windowrule=float,nemo
-      windowrule=float,termfloat
-      windowrule=float,title:^(Picture-in-Picture)$
       windowrule=move 25%-,pavucontrol
+      windowrule=size 960 540,pavucontrol
+
+      # damufloat
+      windowrule=float,danmufloat
       windowrule=move 25%-,danmufloat
-      windowrule=move 25%-,imv
-      windowrule=move 25%-,mpv
-      windowrule=move 25%-,ncmpcpp
-      windowrule=move 25%-,nemo
-      windowrule=move 25%-,termfloat
-      windowrule=move 25%-,title:^(Picture-in-Picture)$
-      windowrule=noblur,^(microsoft-edge)$
-      windowrule=opacity 0.95,title:Telegram
       windowrule=pin,danmufloat
       windowrule=rounding 5,danmufloat
-      windowrule=rounding 5,termfloat
-      windowrule=size 960 540,pavucontrol
       windowrule=size 960 540,danmufloat
+
+      # imv
+      windowrule=float,imv
+      windowrule=move 25%-,imv
       windowrule=size 960 540,imv
+
+      # mpv
+      windowrule=float,mpv
+      windowrule=move 25%-,mpv
       windowrule=size 960 540,mpv
+
+      # ncmpcpp
+      windowrule=float,ncmpcpp
+      windowrule=move 25%-,ncmpcpp
       windowrule=size 960 540,ncmpcpp
+
+      # nemo
+      windowrule=float,nemo
+      windowrule=move 25%-,nemo
       windowrule=size 960 540,nemo
+
+      # termfloat
+      windowrule=float,termfloat
+      windowrule=move 25%-,termfloat
+      windowrule=rounding 5,termfloat
       windowrule=size 960 540,termfloat
+
+      # Picture-in-Picture
+      windowrule=float,title:^(Picture-in-Picture)$
+      windowrule=move 25%-,title:^(Picture-in-Picture)$
       windowrule=size 960 540,title:^(Picture-in-Picture)$
+
+      # microsoft-edge
       windowrule=workspace 1, microsoft-edge
-      windowrule=workspace name:󰭹, title:Slack
+      windowrule=noblur,^(microsoft-edge)$
+
+      # Telegram
+      windowrule=opacity 0.95,title:Telegram
       windowrule=workspace name:󰭹, title:Telegram
+      windowrule=monitor eDP-1, title:Telegram
+
+      # Slack
+      windowrule=workspace name:󰭹, title:Slack
+      windowrule=monitor eDP-1, title:Slack
+
+      # WhatsApp
       windowrule=workspace name:󰭹, title:WhatsApp
+      windowrule=monitor eDP-1, title:WhatsApp
+
+      # musicfox
       windowrule=workspace name:, musicfox
+      windowrule=monitor eDP-1, musicfox
+
+      # youtube-music
       windowrule=workspace name:, title:youtube-music
+      windowrule=monitor eDP-1, title:youtube-music
+
+      # Mail
       windowrule=workspace name:󰇮, title:Mail
       windowrule=monitor eDP-1, title:Mail
-      windowrule=monitor eDP-1, title:youtube-music
-      windowrule=monitor eDP-1, musicfox
-      windowrule=monitor eDP-1, title:Slack
-      windowrule=monitor eDP-1, title:Telegram
-      windowrule=monitor eDP-1, title:WhatsApp
     '';
   };
 }
