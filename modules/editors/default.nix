@@ -12,13 +12,14 @@
       withNodeJs = true;
       withRuby = false;
 
-      extraPackages = with pkgs; [ nodePackages_latest.yarn ];
+      # extraPackages = with pkgs; [ ];
       # plugins = with pkgs.vimPlugins; [];
     };
   };
   home = {
     packages = with pkgs; [
       #-- LSP --#
+      nodePackages_latest.yarn
       nodePackages_latest.typescript
       nodePackages_latest.typescript-language-server
       nodePackages_latest.vscode-langservers-extracted
