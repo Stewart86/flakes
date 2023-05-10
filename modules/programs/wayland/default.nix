@@ -4,6 +4,5 @@ in
 [
   ./imgview
   ./launcher
-  ./notice
   ./mpv
 ] ++ common

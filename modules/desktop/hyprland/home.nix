@@ -265,7 +265,8 @@
       #----------------------#
       # Dismiss Notification #
       #----------------------#
-      bind=$mainMod,Escape,exec, makoctl dismiss --all
+      # open notifiacation center
+      bind=$mainMod, N,exec, swaync-client -t
 
       #-----------------------------------------#
       # control volume,brightness,media players-#
@@ -318,7 +319,6 @@
       #------------#
       exec-once = launch_waybar &
       exec-once = swaync &
-      # exec-once = mako &
       exec-once = border_color &
       exec-once = nm-applet --indicator &
       exec-once = default_wall 

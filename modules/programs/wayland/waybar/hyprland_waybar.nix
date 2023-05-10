@@ -285,7 +285,7 @@
           "on-click" = "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'";
         };
         "disk" = {
-          "format" = " {percentage_used}% ({free})";
+          "format" = " {percentage_used}%";
           "tooltip" = true;
           "on-click" = "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'";
           "interval" = 2;
@@ -326,7 +326,7 @@
         };
         "custom/notifications" = {
           "tooltip" = false;
-          "format" = "{icon}";
+          "format" = "{icon} ";
           "format-icons" = {
             "notification" = "<span foreground='red'><sup></sup></span>";
             "none" = "";

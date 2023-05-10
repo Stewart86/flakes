@@ -2,6 +2,6 @@ let
   common = import ../common;
 in
 [
-  ./notice
+  ./swaync
   ./swww
 ] ++ common
