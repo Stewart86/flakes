@@ -22,14 +22,10 @@
       monitor=DP-7, preferred, 0x0, 0.9
       monitor=DP-5, preferred, 2845x0, 0.8
       monitor=eDP-1, preferred, 6045x0, 1.2
-      monitor=DP-8, preferred, 0x0, 0.9
-      monitor=DP-6, preferred, 2845x0, 0.8
 
       workspace=DP-7, 1
       workspace=DP-5, 2
       workspace=eDP-1, 3
-      workspace=DP-8, 1
-      workspace=DP-6, 2
 
       input {
         kb_layout = us
