@@ -27,7 +27,7 @@
   users.users.${user} = {
     initialHashedPassword = "$6$88FQ7FvPTjgmlVtw$xqY5.Ux1WPJniFpukO6RAtbLVf6XXTU2ulU6zvmiuU/lhtKIIFZux2IrQ2al/nd3zPWvJ1OEk0c8m5ACoVAtM.";
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" ];
+    extraGroups = [ "wheel" "video" "audio" "docker" ];
     packages = (with pkgs; [
       whatsapp-for-linux
       slack
@@ -104,6 +104,9 @@
       jack.enable = true;
     };
   };
+
+  virtualisation.docker.enable = true;
+
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
@@ -119,6 +122,7 @@
       };
     };
   };
+
   security.polkit.enable = true;
   security.sudo = {
     enable = true;
