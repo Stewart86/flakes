@@ -317,7 +317,8 @@
       # auto start #
       #------------#
       exec-once = launch_waybar &
-      exec-once = mako &
+      exec-once = swaync &
+      # exec-once = mako &
       exec-once = border_color &
       exec-once = nm-applet --indicator &
       exec-once = default_wall 

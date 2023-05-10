@@ -164,8 +164,8 @@
         modules-left = [
           "custom/launcher"
           "wlr/workspaces"
-          "temperature"
-          #"idle_inhibitor"
+          # "temperature"
+          # "idle_inhibitor"
           "custom/wall"
           "mpd"
           "custom/cava-internal"
@@ -178,6 +178,7 @@
           "backlight"
           "memory"
           "cpu"
+          "disk"
           "network"
           "battery"
           "custom/powermenu"
@@ -202,8 +203,8 @@
         "wlr/workspaces" = {
           "format" = "{icon}";
           "on-click" = "activate";
-          # "on-scroll-up" = "hyprctl dispatch workspace e+1";
-          # "on-scroll-down" = "hyprctl dispatch workspace e-1";
+          "on-scroll-up" = "hyprctl dispatch workspace e+1";
+          "on-scroll-down" = "hyprctl dispatch workspace e-1";
         };
         "idle_inhibitor" = {
           "format" = "{icon}";
@@ -224,8 +225,17 @@
           "scroll-step" = 1;
           "format" = "{icon} {volume}%";
           "format-muted" = " Muted";
+          "format-source" = "{volume}% ";
+          "format-source-muted" = "";
+          "format-bluetooth" = "{icon} {volume}%";
+          "format-bluetooth-muted" = "";
           "format-icons" = {
             "default" = [ "" "" "" ];
+            "headphone" = "";
+            "headset" = "";
+            "phone" = "";
+            "portable" = "";
+            "car" = " ";
           };
           "states" = {
             "warning" = 85;
@@ -237,47 +247,48 @@
         "battery" = {
           "interval" = 10;
           "states" = {
-            "warning" = 20;
+            "good" = 100;
+            "warning" = 30;
             "critical" = 10;
           };
           "format" = "{icon} {capacity}%";
           "format-icons" = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
           "format-full" = "{icon} {capacity}%";
-          "format-charging" = "󱐋 {capacity}%";
+          "format-charging" = " {capacity}%";
+          "format-plugged" = " {capacity}%";
           "tooltip" = false;
         };
         "clock" = {
-          "interval" = 1;
-          "format" = "{:%R, %d %B (%A)} 󱛡";
-          "tooltip-format" = "<tt><small>{calendar}</small></tt>";
-          "calendar" = {
-            "mode" = "year";
-            "mode-mon-col" = 3;
-            "on-scroll" = 1;
-            "format" = {
-              "months" = "<span color='#C6D0F5'><b>{}</b></span>";
-              "days" = "<span color='#566e63'><b>{}</b></span>";
-              "weeks" = "<span color='#99ffdd'><b>W{}</b></span>";
-              "weekdays" = "<span color='#A5CE6A'><b>{}</b></span>";
-              "today" = "<span color='#F28FAD'><b><u>{}</u></b></span>";
-            };
-          };
-          "actions" = {
-            "on-click-right" = "mode";
-            "on-scroll-up" = "shift_up";
-            "on-scroll-down" = "shift_down";
-          };
+          "interval" = 60;
+          "timezone" = "Asia/Singapore";
+          "format" = " {:%d <small>%a</small> %H:%M}";
+          "format-alt" = " {:%A %B %d %Y (%V) | %r}";
+          "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          "calendar-weeks-pos" = "right";
+          "today-format" = "<span color='#f38ba8'><b><u>{}</u></b></span>";
+          "format-calendar" = "<span color='#f2cdcd'><b>{}</b></span>";
+          "format-calendar-weeks" = "<span color='#94e2d5'><b>W{:%U}</b></span>";
+          "format-calendar-weekdays" = "<span color='#f9e2af'><b>{}</b></span>";
         };
         "memory" = {
-          "interval" = 1;
-          "format" = "󰍛 {percentage}%";
+          "interval" = 2;
+          "format" = " {percentage}%";
           "states" = {
             "warning" = 85;
           };
+          "on-click" = "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'";
         };
         "cpu" = {
-          "interval" = 1;
+          "interval" = 2;
           "format" = "󰻠 {usage}%";
+          "on-click" = "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'";
+        };
+        "disk" = {
+          "format" = " {percentage_used}% ({free})";
+          "tooltip" = true;
+          "on-click" = "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'";
+          "interval" = 2;
+
         };
         "mpd" = {
           "max-length" = 25;
@@ -307,6 +318,27 @@
           "tooltip" = false;
           "format" = " {temperatureC}°C";
         };
+        "hyprland/window" = {
+          "format" = "{}";
+          "separate-outputs" = true;
+          "max-length" = 35;
+        };
+        "custom/notifications" = {
+          "tooltip" = false;
+          "format" = "{icon}";
+          "format-icons" = {
+            "notification" = "<span foreground='red'><sup></sup></span>";
+            "none" = "";
+            "dnd-notification" = "<span foreground='red'><sup></sup></span>";
+            "dnd-none" = "";
+          };
+          "return-type" = "json";
+          "exec-if" = "which swaync-client";
+          "exec" = "swaync-client -swb";
+          "on-click" = "swaync-client -t -sw";
+          "on-click-right" = "swaync-client -d -sw";
+          "escape" = true;
+        };
         "custom/powermenu" = {
           "format" = "";
           "on-click" = "pkill rofi || ~/.config/rofi/powermenu.sh";
@@ -314,7 +346,7 @@
         };
         "tray" = {
           "icon-size" = 15;
-          "spacing" = 5;
+          "spacing" = 15;
         };
       }];
     };
