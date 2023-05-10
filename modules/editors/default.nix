@@ -13,7 +13,7 @@
       withRuby = false;
 
       # extraPackages = with pkgs; [ ];
-      # plugins = with pkgs.vimPlugins; [ ];
+      plugins = with pkgs.vimPlugins; [ markdown-preview-nvim ];
     };
   };
   home = {
