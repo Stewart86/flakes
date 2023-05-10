@@ -1,3 +1,3 @@
 {
-  home.file.".config/swaync/config.json".source = import ./config.json;
+  home.file.".config/swaync/config.json".source = ./config.json;
 }
