@@ -23,7 +23,7 @@
 }
 
 window#waybar {
-  background: shade(alpha(@borders, 0.9), 1.25);
+  background: none;
 }
 window > box {
   margin-left: 5px;
@@ -32,10 +32,12 @@ window > box {
   background: none;
 }
 #workspaces {
+  background: rgb(30, 30, 46);
   padding-left: 0px;
   padding-right: 4px;
 }
 #workspaces button {
+  background: rgb(30, 30, 46);
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 6px;
@@ -59,6 +61,8 @@ tooltip label {
   color: rgb(217, 224, 238);
 }
 #custom-launcher {
+  background: rgb(30, 30, 46);
+  border-radius: 3px 0px 0px 3px;
   font-size: 20px;
   padding-left: 8px;
   padding-right: 6px;
@@ -105,7 +109,7 @@ tooltip label {
   color: rgb(248, 189, 150);
 }
 #pulseaudio {
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 0px 0px 3px;
   color: rgb(245, 224, 220);
 }
 #network {
@@ -138,4 +142,7 @@ tooltip label {
 #custom-cava-internal {
   font-family: "Hack Nerd Font";
   border-radius: 0px 0px 3px 3px;
+}
+#custom-notifications {
+  border-radius: 0px 3px 3px 0px;
 }
