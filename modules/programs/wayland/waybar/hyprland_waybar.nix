@@ -50,7 +50,7 @@
                  animation-direction: alternate;
                }
                window#waybar {
-                 background-color: transparent;
+                 background: transparent;
                }
                window > box {
                  margin-left: 5px;
@@ -164,7 +164,6 @@
         modules-left = [
           "custom/launcher"
           "wlr/workspaces"
-          # "temperature"
           # "idle_inhibitor"
           "custom/wall"
           "mpd"
@@ -179,6 +178,7 @@
           "memory"
           "cpu"
           "disk"
+          "temperature"
           "network"
           "battery"
           "custom/powermenu"
@@ -220,7 +220,7 @@
           "on-scroll-up" = "light -A 5";
           "on-scroll-down" = "light -U 5";
           "format" = "{icon} {percent}%";
-          "format-icons" = [ "󰃞" "󰃟" "󰃟" "󰃠" ];
+          "format-icons" = [ "󰃚" "󰃛" "󰃜" "󰃝" "󰃞" "󰃟" "󰃠" ];
         };
         "pulseaudio" = {
           "scroll-step" = 1;
@@ -229,9 +229,10 @@
           "format-source" = "{volume}% ";
           "format-source-muted" = "";
           "format-bluetooth" = "{icon} {volume}%";
-          "format-bluetooth-muted" = "";
+          "format-bluetooth-muted" = "󰗿";
           "format-icons" = {
             "default" = [ "" "" "" ];
+            "bluetooth" = "";
             "headphone" = "";
             "headset" = "";
             "phone" = "";
@@ -307,15 +308,16 @@
         };
         "network" = {
           "interval" = 1;
-          "format-wifi" = "󰖩 {essid}";
-          "format-ethernet" = "󰌗 {ifname} ({ipaddr})";
-          "format-linked" = "󰌗 {essid} (No IP)";
-          "format-disconnected" = "󰌗 Disconnected";
+          "format-wifi" = "󰖩";
+          "format-ethernet" = "󰌗";
+          "format-linked" = "󰌗";
+          # "format-wifi" = "󰖩 {essid}";
+          # "format-ethernet" = "󰌗 {ifname} ({ipaddr})";
+          # "format-linked" = "󰌗 {essid} (No IP)";
+          "format-disconnected" = "󰌙";
           "tooltip" = false;
         };
         "temperature" = {
-          # "hwmon-path"= "${env:HWMON_PATH}";
-          #"critical-threshold"= 80;
           "tooltip" = false;
           "format" = " {temperatureC}°C";
         };
