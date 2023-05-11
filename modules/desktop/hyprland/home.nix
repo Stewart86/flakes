@@ -406,9 +406,9 @@
 
       # Speical
       windowrule=float,title:floating_btop
-      windowrule=float,title:quickterm
       windowrule=workspace special,title:quickterm
       windowrule=size 100% 10%,title:quickterm
+      windowrule=move 0% 0%,title:quickterm
     '';
   };
 }
