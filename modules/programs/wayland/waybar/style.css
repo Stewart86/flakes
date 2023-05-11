@@ -29,7 +29,7 @@ window > box {
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  background: shade(alpha(@borders, 0.9), 1.25);
+  background: transparent;
 }
 #workspaces {
   padding-left: 0px;
@@ -80,6 +80,7 @@ tooltip label {
 #custom-cava-internal,
 #custom-notifications,
 #tray {
+  background: rgb(30, 30, 46);
   padding-left: 10px;
   padding-right: 10px;
 }
