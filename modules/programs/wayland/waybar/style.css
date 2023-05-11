@@ -137,6 +137,7 @@ tooltip label {
   background: transparent;
 }
 #mpd {
+  background: rgb(30, 30, 46);
   color: #c0caf5;
 }
 #custom-cava-internal {

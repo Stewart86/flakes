@@ -66,8 +66,7 @@ let
   launch_waybar = pkgs.writeShellScriptBin "launch_waybar" ''
     #!/bin/bash
     killall .waybar-wrapped
-    SDIR="$HOME/.config/waybar"
-    waybar -c "$SDIR"/config -s "$SDIR"/style.css > /dev/null 2>&1 & 
+    waybar > /dev/null 2>&1 & 
   '';
   border_color = pkgs.writeShellScriptBin "border_color" ''
     function border_color {
