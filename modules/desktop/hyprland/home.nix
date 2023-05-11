@@ -368,9 +368,7 @@
 
       # termfloat
       windowrule=float,termfloat
-      windowrule=move 25%-,termfloat
       windowrule=rounding 5,termfloat
-      windowrule=size 960 540,termfloat
 
       # Picture-in-Picture
       windowrule=float,title:^(Picture-in-Picture)$
