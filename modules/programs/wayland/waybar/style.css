@@ -134,7 +134,7 @@ tooltip label {
   font-style: italic;
 }
 #mpd.stopped {
-  background: transparent;
+  background: rgb(30, 30, 46);
 }
 #mpd {
   background: rgb(30, 30, 46);

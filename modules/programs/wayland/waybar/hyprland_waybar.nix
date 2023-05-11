@@ -144,17 +144,17 @@
           "states" = {
             "warning" = 85;
           };
-          "on-click" = "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'";
+          "on-click" = "kitty --title floating_btop sh -c 'btop'";
         };
         "cpu" = {
           "interval" = 2;
           "format" = "󰻠 {usage}%";
-          "on-click" = "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'";
+          "on-click" = "kitty --title floating_btop sh -c 'btop'";
         };
         "disk" = {
           "format" = " {percentage_used}%";
           "tooltip" = true;
-          "on-click" = "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'";
+          "on-click" = "kitty --title floating_btop sh -c 'btop'";
           "interval" = 2;
 
         };

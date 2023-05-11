@@ -262,6 +262,8 @@
       bind=$mainMod,Super_L,exec, bash ~/.config/rofi/powermenu.sh
       bind=$mainMod,V,exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
+      bind=$mainMod `,exec, kitty fish --title="quickterm"
+
       #----------------------#
       # Dismiss Notification #
       #----------------------#
@@ -351,11 +353,6 @@
       windowrule=move 25%-,imv
       windowrule=size 960 540,imv
 
-      # mpv
-      windowrule=float,mpv
-      windowrule=move 25%-,mpv
-      windowrule=size 960 540,mpv
-
       # ncmpcpp
       windowrule=float,ncmpcpp
       windowrule=move 25%-,ncmpcpp
@@ -405,6 +402,13 @@
       # Mail
       windowrule=workspace name:󰇮, title:Mail
       windowrule=monitor eDP-1, title:Mail
+
+
+      # Speical
+      windowrule=float,title:floating_btop
+      windowrule=float,title:quickterm
+      windowrule=workspace special,title:quickterm
+      windowrule=size 100% 10%,title:quickterm
     '';
   };
 }
