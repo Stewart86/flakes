@@ -262,7 +262,7 @@
       bind=$mainMod,Super_L,exec, bash ~/.config/rofi/powermenu.sh
       bind=$mainMod,V,exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
-      bind=$mainMod, `,exec, kitty fish --title="quickterm"
+      bind=$mainMod, F1,exec, kitty --title="quickterm" fish
 
       #----------------------#
       # Dismiss Notification #
