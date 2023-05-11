@@ -255,7 +255,7 @@
       bind=$mainMod SHIFT,X,exec,myswaylock
 
       bind=$mainMod,bracketleft,exec,grimblast --notify --cursor  copysave area ~/Pictures/screenshot/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
-      bind=$mainMod,bracketright,exec, grimblast --notify --cursor  copy area
+      bind=$mainMod,bracketright,exec, grimblast --notify --cursor  edit area
 
       bind=$mainMod,A,exec, grimblast_watermark
 
@@ -408,7 +408,6 @@
       windowrule=float,title:floating_btop
       windowrule=workspace special,title:quickterm
       windowrule=size 100% 10%,title:quickterm
-      windowrule=move 0% 0%,title:quickterm
     '';
   };
 }

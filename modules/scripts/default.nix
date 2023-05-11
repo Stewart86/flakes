@@ -82,9 +82,6 @@ let
     systemctl --user stop hyprland-session.target
     systemctl --user daemon-reload
     systemctl --user reset-failed
-    systemctl daemon-reload
-    systemctl reset-failed
-    systemctl restart home-manager-stewart.service
   '';
 in
 {

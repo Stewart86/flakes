@@ -79,6 +79,7 @@
       imagemagick
       flameshot
       grim
+      gimp
       cliphist
       polkit_gnome
     ];
