@@ -78,10 +78,12 @@ let
 
   systemd_reset = pkgs.writeShellScriptBin "systemd_reset" ''
     swww kill
+    systemctl stop home-manager-stewart.service
     systemctl --user stop graphical-session.target
     systemctl --user stop hyprland-session.target
     systemctl --user daemon-reload
     systemctl --user reset-failed
+    systemctl start home-manager-stewart.service
   '';
 in
 {
