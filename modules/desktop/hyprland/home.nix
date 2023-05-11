@@ -127,6 +127,7 @@
 
       bind = $mainMod, Return, exec, kitty fish
       bind = $mainMod SHIFT, Return, exec, kitty --class="termfloat" fish
+      bind = $mainMod CTRL, Return, exec, kitty --title="quickterm" fish
       bind = $mainMod, Q, killactive,
       bind = $mainMod SHIFT, P, killactive,
       bind = $mainMod SHIFT, Q, exit,
@@ -262,7 +263,6 @@
       bind=$mainMod,Super_L,exec, bash ~/.config/rofi/powermenu.sh
       bind=$mainMod,V,exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
-      bind=$mainMod, F1,exec, kitty --title="quickterm" fish
 
       #----------------------#
       # Dismiss Notification #
