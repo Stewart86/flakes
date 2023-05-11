@@ -23,7 +23,7 @@
 }
 
 window#waybar {
-  background: rgba(1, 1, 1, 0.4);
+  background: shade(alpha(@borders, 0.9), 1.25);
 }
 window > box {
   margin-left: 5px;
