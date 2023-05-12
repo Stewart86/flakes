@@ -38,6 +38,9 @@
   boot = {
     supportedFilesystems = [ "ntfs" ];
     loader = {
+      grub = {
+        configurationLimit = 5;
+      };
       systemd-boot = {
         enable = true;
         consoleMode = "auto";
@@ -51,7 +54,7 @@
     kernelParams = [
       "quiet"
       "splash"
-      "i915.force_probe=9a49"
+      # "i915.force_probe=9a49"
     ];
     consoleLogLevel = 0;
     initrd.verbose = false;
