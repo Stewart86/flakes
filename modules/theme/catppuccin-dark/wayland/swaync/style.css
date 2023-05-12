@@ -1,9 +1,9 @@
 /* Dracula Theme */
 @define-color foreground rgb(181, 232, 224);
 @define-color background rgb(40, 42, 54);
-@define-color background-alpha rgba(40, 42, 54, 0.8);
-@define-color accent rgba(189, 147, 249, 0.8);
-@define-color current-line rgb(68, 71, 90);
+@define-color background-alpha rgba(40, 42, 54, 0.6);
+@define-color accent rgba(150, 205, 251, 0.8);
+@define-color current-line rgb(68, 71, 90, 0.6);
 @define-color comment rgb(98, 114, 164);
 
 .notification-row {
@@ -68,7 +68,7 @@
 .notification-content {
   background: transparent;
   padding: 6px;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 .close-button {
@@ -109,7 +109,7 @@
 }
 
 .notification-default-action {
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 /* When alternative actions are visible */
@@ -126,11 +126,11 @@
 
 /* add bottom border radius to eliminate clipping */
 .notification-action:first-child {
-  border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 3px;
 }
 
 .notification-action:last-child {
-  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 3px;
   border-right: 1px solid @accent;
 }
 
@@ -140,7 +140,7 @@
 .body-image {
   margin-top: 6px;
   background-color: @foreground;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 .summary {
@@ -180,7 +180,7 @@
   background: @background;
   border: 2px solid @accent;
   box-shadow: none;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 .control-center-clear-all:hover {
@@ -188,7 +188,7 @@
 }
 
 .control-center-dnd {
-  border-radius: 8px;
+  border-radius: 3px;
   background: @background;
   border: 1px solid @accent;
   box-shadow: none;
@@ -200,12 +200,12 @@
 
 .control-center-dnd slider {
   background: @background;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 .control-center {
   background: @background-alpha;
-  border-radius: 10px;
+  border-radius: 3px;
   background-clip: border-box;
   padding: 4px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7),
@@ -241,7 +241,7 @@
   background: @background;
   border: 2px solid @accent;
   box-shadow: none;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 .widget-title > button:hover {
   background: @background;
@@ -254,7 +254,7 @@
 }
 .widget-dnd > switch {
   font-size: initial;
-  border-radius: 8px;
+  border-radius: 3px;
   background: @background;
   border: 1px solid @accent;
   box-shadow: none;
@@ -264,7 +264,7 @@
 }
 .widget-dnd > switch slider {
   background: @background;
-  border-radius: 8px;
+  border-radius: 3px;
   border: 1px solid @foreground;
 }
 
@@ -284,7 +284,7 @@
   padding: 8px;
   margin: 8px;
   background-color: @background;
-  border-radius: 8px;
+  border-radius: 3px;
   border: 2px solid @accent;
   color: @foreground;
 }
