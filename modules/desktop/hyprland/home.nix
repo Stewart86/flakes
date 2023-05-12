@@ -6,6 +6,8 @@
     bash = {
       initExtra = ''
         if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+          export HYPRLAND_LOG_WLR=1
+          HYPRLAND_LOG_WLR=1
           exec Hyprland
         fi
       '';
