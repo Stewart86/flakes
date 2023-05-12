@@ -10,6 +10,7 @@
       ../../../modules/desktop/hyprland
     ];
 
+  programs.hyprland.enable = true;
   programs.fish.enable = true;
   programs.ssh.startAgent = true;
   programs.evolution = {
