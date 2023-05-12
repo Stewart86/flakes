@@ -4,14 +4,14 @@
   ];
   programs = {
     bash = {
-      # initExtra = ''
-      #   if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-      #     exec Hyprland
-      #   fi
-      # '';
+      initExtra = ''
+        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+          exec Hyprland
+        fi
+      '';
     };
   };
-  # systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
+  systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
     enable = true;
     systemdIntegration = true;
