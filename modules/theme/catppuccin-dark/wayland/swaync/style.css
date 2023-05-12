@@ -12,6 +12,7 @@
   margin-right: 4px;
   margin-bottom: 13px;
   margin-top: 8px;
+  border-radius: 80px;
 }
 
 .control-center .notification-row:focus,
