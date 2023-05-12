@@ -2,7 +2,7 @@
 @define-color background rgb(40, 42, 54);
 @define-color background-alpha rgba(40, 42, 54, 0.6);
 @define-color accent rgba(150, 205, 251, 0.8);
-@define-color current-line rgba(30, 30, 46, 0.3);
+@define-color current-line rgba(30, 30, 46, 0.4);
 @define-color comment rgb(98, 114, 164);
 
 .notification-row {
@@ -12,7 +12,7 @@
   margin-right: 4px;
   margin-bottom: 13px;
   margin-top: 8px;
-  border-radius: 80px;
+  border-radius: 3px;
 }
 
 .control-center .notification-row:focus,
@@ -37,7 +37,7 @@
 
 .notification {
   transition: all 200ms ease;
-  border-radius: 8px;
+  border-radius: 3px;
   margin: 6 7px 6px 7px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
   padding: 0;
@@ -117,7 +117,7 @@
 }
 
 .notification-action {
-  border-radius: 0px;
+  border-radius: 3px;
   border-top: none;
   border-right: none;
 }
