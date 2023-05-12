@@ -96,8 +96,9 @@ tooltip label {
   color: rgb(245, 194, 231);
 }
 #clock {
-  color: rgb(217, 224, 238);
+  color: rgba(217, 224, 238, 0.3);
   border-radius: 3px;
+  bakdrop-filter: blur(4px);
 }
 #custom-wall {
   color: rgb(221, 182, 242);
