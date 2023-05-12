@@ -4,6 +4,7 @@
   programs = {
     dconf.enable = true;
     light.enable = true;
+    hyprland.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
