@@ -34,7 +34,6 @@ in
             (import ../overlays)
               ++ [
               self.overlays.default
-              inputs.picom.overlays.default
             ];
         };
       }

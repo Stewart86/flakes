@@ -4,7 +4,7 @@
   nixpkgs.system = "x86_64-linux";
 
   networking = {
-    hostName = "surface-nix"; # Define your hostname.
+    hostName = "surface-nix";
     networkmanager.enable = true;
     hosts = {
       "185.199.109.133" = [ "raw.githubusercontent.com" ];
@@ -54,10 +54,9 @@
   nix = {
     settings = {
       # substituters = [
-      #   "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       #   "https://cache.nixos.org/"
       # ];
-      auto-optimise-store = true; # Optimise syslinks
+      auto-optimise-store = true;
     };
     gc = {
       automatic = true;
