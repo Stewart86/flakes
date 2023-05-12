@@ -2,16 +2,12 @@
 @define-color background rgb(40, 42, 54);
 @define-color background-alpha rgba(40, 42, 54, 0.6);
 @define-color accent rgba(150, 205, 251, 0.8);
-@define-color current-line rgb(68, 71, 90);
+@define-color current-line transparent;
 @define-color comment rgb(98, 114, 164);
 
 .notification-row {
   transition: all 200ms ease;
   outline: none;
-  margin-bottom: 4px;
-  margin-right: 13px;
-  margin-top: 8px;
-  border-radius: 80px;
 }
 
 .control-center .notification-row:focus,
