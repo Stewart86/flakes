@@ -13,7 +13,7 @@
     pamixer
   ];
 
-  security.pam.services.swaylock = { };
+  security.pam.services.swaylock.text = "auth include login";
   xdg.portal = {
     enable = true;
     wlr.enable = true;

@@ -105,6 +105,7 @@
     };
     passSecretService.enable = true;
     dbus.packages = [ pkgs.gcr ];
+    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
     getty.autologinUser = "${user}";
     gvfs.enable = true;
     pipewire = {
@@ -132,25 +133,23 @@
         TimeoutStopSec = 10;
       };
     };
-    user.targets.tray = {
-      Unit = {
-        Description = "Home Manager System Tray";
-        Requires = [ "graphical-session-pre.target" ];
-      };
-    };
   };
 
-  security.polkit.enable = true;
-  security.sudo = {
-    enable = true;
-    extraConfig = ''
-      ${user} ALL=(ALL) NOPASSWD:ALL
-    '';
-  };
-  security.doas = {
-    enable = false;
-    extraConfig = ''
-      permit nopass :wheel
-    '';
+  security = {
+    polkit.enable = true;
+
+    sudo = {
+      enable = true;
+      extraConfig = ''
+        ${user} ALL=(ALL) NOPASSWD:ALL
+      '';
+    };
+
+    doas = {
+      enable = false;
+      extraConfig = ''
+        permit nopass :wheel
+      '';
+    };
   };
 }
