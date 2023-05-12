@@ -1,9 +1,8 @@
-/* Dracula Theme */
 @define-color foreground rgb(181, 232, 224);
 @define-color background rgb(40, 42, 54);
 @define-color background-alpha rgba(40, 42, 54, 0.6);
 @define-color accent rgba(150, 205, 251, 0.8);
-@define-color current-line rgb(68, 71, 90, 0.6);
+@define-color current-line rgb(68, 71, 90);
 @define-color comment rgb(98, 114, 164);
 
 .notification-row {
