@@ -10,13 +10,6 @@
       ../../../modules/desktop/hyprland
     ];
 
-  programs.hyprland.enable = true;
-  programs.fish.enable = true;
-  programs.ssh.startAgent = true;
-  programs.evolution = {
-    enable = true;
-    plugins = [ pkgs.evolution-ews ];
-  };
 
   microsoft-surface.kernelVersion = "6.1.18";
   hardware.opengl = {
@@ -69,6 +62,14 @@
       fcitx5-pinyin-moegirl
       fcitx5-pinyin-zhwiki
     ];
+  };
+
+  programs.hyprland.enable = true;
+  programs.fish.enable = true;
+  programs.ssh.startAgent = true;
+  programs.evolution = {
+    enable = true;
+    plugins = [ pkgs.evolution-ews ];
   };
 
   environment = {

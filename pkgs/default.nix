@@ -1,4 +1,4 @@
-rec{
+{
   overlay = final: prev:
     let
       dirContents = builtins.readDir ../pkgs;
