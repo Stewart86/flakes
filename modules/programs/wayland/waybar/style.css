@@ -26,15 +26,15 @@ window#waybar {
   background: none;
 }
 window > box {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 5px;
   background: none;
 }
 #workspaces {
   background: rgb(30, 30, 46);
   padding-left: 0px;
-  padding-right: 4px;
+  padding-right: 0px;
 }
 #workspaces button {
   background: rgb(30, 30, 46);

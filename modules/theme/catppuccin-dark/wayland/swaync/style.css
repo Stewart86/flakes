@@ -9,9 +9,9 @@
   transition: all 200ms ease;
   background: @current-line;
   outline: none;
-  margin-right: 4px;
-  margin-bottom: 13px;
-  margin-top: 8px;
+  margin-right: 22px;
+  margin-bottom: 0px;
+  margin-top: 22px;
   border-radius: 3px;
 }
 
@@ -24,7 +24,7 @@
 .notification-row:hover .notification {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.8);
   border: 0px solid @accent;
-  background: @current-line;
+  background: rgba(30, 30, 46, 0.6);
 }
 
 .control-center .notification {
