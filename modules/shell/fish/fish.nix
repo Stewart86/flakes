@@ -7,9 +7,10 @@
       ls = "lsd -A";
       ll = "lsd -l -A";
       tree = "lsd --tree";
-      rebuild = "sudo nixos-rebuild switch --flake .#";
     };
-    interactiveShellInit = "oh-my-posh init fish --config ~/.config/fish/omp_theme/stewart.omp.json | source";
+    interactiveShellInit = ''
+      oh-my-posh init fish --config ~/.config/fish/omp_theme/stewart.omp.json | source
+    '';
   };
   home = {
     packages = with pkgs; [
