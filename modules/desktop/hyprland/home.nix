@@ -6,8 +6,7 @@
     bash = {
       initExtra = ''
         if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-          sleep 60
-          exec ~/github/Hyprland/build/src/Hyprland
+          exec Hyprland
         fi
       '';
     };
