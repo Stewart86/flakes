@@ -22,6 +22,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "audio" "docker" ];
     packages = (with pkgs; [
+      tdesktop
       whatsapp-for-linux
       slack
       microsoft-edge
@@ -91,6 +92,7 @@
       polkit_gnome
       pulsemixer
       swaynotificationcenter
+      swappy
       wev
       wf-recorder
       wl-clipboard

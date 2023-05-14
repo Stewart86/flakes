@@ -47,6 +47,7 @@
       mypy
       cargo
       rustc
+      luarocks
     ];
   };
 
