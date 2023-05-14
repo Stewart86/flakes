@@ -27,26 +27,17 @@
     binsh = "${pkgs.dash}/bin/dash";
     shells = with pkgs; [ fish ];
     systemPackages = with pkgs; [
-      bottom
-      cargo
-      clang
-      direnv
       exa
-      gcc
       gdu
       git
       killall
       lsd
       neofetch
       neovim
-      nodejs_20
-      python311
       ranger
-      rustc
       socat
-      swaynotificationcenter
       wget
-      zig
+      unzip
     ];
   };
   services.dbus.enable = true;

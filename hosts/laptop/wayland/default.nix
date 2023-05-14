@@ -10,7 +10,6 @@
       ../../../modules/desktop/hyprland
     ];
 
-
   microsoft-surface.kernelVersion = "6.1.18";
   hardware.opengl = {
     driSupport = true;
@@ -47,7 +46,6 @@
     };
     kernelParams = [
       "quiet"
-      "splash"
     ];
     consoleLogLevel = 0;
     initrd.verbose = false;
@@ -64,34 +62,39 @@
     ];
   };
 
-  programs.hyprland.enable = true;
-  programs.fish.enable = true;
-  programs.ssh.startAgent = true;
-  programs.evolution = {
-    enable = true;
-    plugins = [ pkgs.evolution-ews ];
+  programs = {
+    hyprland.enable = true;
+    fish.enable = true;
+    ssh.startAgent = true;
+
+    evolution = {
+      enable = true;
+      plugins = [ pkgs.evolution-ews ];
+    };
   };
 
   environment = {
     systemPackages = with pkgs; [
-      libnotify
-      wl-clipboard
-      wlr-randr
-      cinnamon.nemo
-      networkmanagerapplet
-      wev
-      wf-recorder
       alsa-lib
       alsa-utils
-      flac
-      pulsemixer
-      pavucontrol
-      imagemagick
-      flameshot
-      grim
-      gimp
+      cinnamon.nemo
       cliphist
+      direnv
+      flac
+      flameshot
+      gimp
+      grim
+      imagemagick
+      libnotify
+      networkmanagerapplet
+      pavucontrol
       polkit_gnome
+      pulsemixer
+      swaynotificationcenter
+      wev
+      wf-recorder
+      wl-clipboard
+      wlr-randr
     ];
   };
   services = {
