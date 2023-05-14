@@ -4,11 +4,12 @@
   ];
   programs = {
     bash = {
-      # initExtra = ''
-      #   if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-      #     exec ~/github/Hyprland/build/src/Hyprland
-      #   fi
-      # '';
+      initExtra = ''
+        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+          sleep 60
+          exec ~/github/Hyprland/build/src/Hyprland
+        fi
+      '';
     };
   };
   systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
