@@ -2,7 +2,8 @@
   home = {
     sessionVariables = {
       EDITOR = "nvim";
-      BROWSER = "microsoft-edge";
+      BROWSER = "brave";
+      DEFAULT_BROWSER = "brave";
       TERMINAL = "kitty";
       QT_QPA_PLATFORMTHEME = "gtk3";
       QT_SCALE_FACTOR = "1";
