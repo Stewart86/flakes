@@ -25,7 +25,6 @@
       tdesktop
       whatsapp-for-linux
       slack
-      microsoft-edge
       nextcloud-client
     ]);
   };
