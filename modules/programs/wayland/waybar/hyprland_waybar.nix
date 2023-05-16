@@ -45,7 +45,7 @@
           "cpu"
           "disk"
           "temperature"
-          "network"
+          # "network"
           "battery"
           "custom/powermenu"
           "tray"
@@ -140,7 +140,7 @@
         };
         "memory" = {
           "interval" = 2;
-          "format" = " {percentage}%";
+          "format" = "󰘚 {percentage}%";
           "states" = {
             "warning" = 85;
           };
@@ -148,7 +148,7 @@
         };
         "cpu" = {
           "interval" = 2;
-          "format" = "󰻠 {usage}%";
+          "format" = " {usage}%";
           "on-click" = "kitty --title floating_btop sh -c 'btop'";
         };
         "disk" = {
@@ -196,7 +196,7 @@
           "tooltip" = false;
           "format" = "{icon} ";
           "format-icons" = {
-            "notification" = "<span foreground='red'><sup></sup></span>";
+            "notification" = "󰂚<span foreground='red'><sup></sup></span>";
             "none" = "";
             "dnd-notification" = "<span foreground='red'><sup></sup></span>";
             "dnd-none" = "";
