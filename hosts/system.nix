@@ -37,6 +37,7 @@
       ranger
       socat
       wget
+      xdg-utils
       unzip
     ];
   };
