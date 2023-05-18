@@ -15,7 +15,7 @@ in
     ] ++ [
       inputs.hyprland.nixosModules.default
       inputs.home-manager.nixosModules.home-manager
-      # inputs.nixos-hardware.nixosModules.microsoft-surface-common
+      inputs.nixos-hardware.nixosModules.microsoft-surface-common
       {
         home-manager = {
           useGlobalPkgs = true;
