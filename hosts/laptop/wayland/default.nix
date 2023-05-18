@@ -10,7 +10,7 @@
       ../../../modules/desktop/hyprland
     ];
 
-  microsoft-surface.kernelVersion = "6.1.18";
+  # microsoft-surface.kernelVersion = "6.1.18";
   hardware.opengl = {
     driSupport = true;
     enable = true;
@@ -30,6 +30,7 @@
   };
   boot = {
     supportedFilesystems = [ "ntfs" ];
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
     loader = {
       grub = {
         configurationLimit = 5;
