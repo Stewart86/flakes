@@ -6,7 +6,6 @@
     bash = {
       initExtra = ''
         if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-          sleep 30
           exec Hyprland
         fi
       '';
