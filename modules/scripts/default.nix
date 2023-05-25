@@ -71,6 +71,5 @@ in
     default_wall
     launch_waybar
     border_color
-    systemd_reset
   ];
 }
