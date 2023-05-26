@@ -4,6 +4,7 @@
   ./lazygit
   ./music
   ./neofetch
+  ./nnn
   ./obs-studio
   ./ranger
   ./resource_monitor
