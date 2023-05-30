@@ -1,9 +1,6 @@
-Adapted from [ruixi-rebirth](https://github.com/ruixi-rebirth/flakes) minimal install version with additional to some personal applications.
+## Credit and Credit is Due
 
-## Status
-
-Currently this project can be run properly most of the time, except for some unknown bug that causes gray screen with only mouse cursor displayed. Additional testing required for bug fix.
-Temporary solution is to exit Hyprland (ALT+SHIFT+Q) and run `Hyprland` in tty. After this some applications systemd service might have failed. Just reset it and execute the applications again.
+- Config Originally adapted from [ruixi-rebirth](https://github.com/ruixi-rebirth/flakes) minimal install version with additional to some personal applications.
 
 ## Applications included
 
