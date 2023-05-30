@@ -2,8 +2,15 @@
 
 {
   nixpkgs.system = "x86_64-linux";
-
   networking = {
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 80 442 ];
+      # allowedUDPPortRanges = [
+      #   { from = 4000; to = 4007; }
+      #   { from = 8000; to = 8010; }
+      # ];
+    };
     hostName = "surface-nix";
     networkmanager.enable = true;
     hosts = {
