@@ -1,4 +1,4 @@
-## Credit and Credit is Due
+## Credit when Credit is Due
 
 - Config Originally adapted from [ruixi-rebirth](https://github.com/ruixi-rebirth/flakes) minimal install version with additional to some personal applications.
 

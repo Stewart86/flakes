@@ -5,7 +5,14 @@
     nnn = {
       enable = true;
       package = pkgs.nnn.override { withNerdIcons = true; };
-      bookmarks = { };
+      bookmarks = {
+        "h" = "~";
+        "f" = "~/Flakes";
+        "g" = "~/GitHub";
+        "w" = "~/Pictures/wallpapers";
+        "a" = "~/ample/ample-api";
+        "o" = "~/ample/frontend-pos";
+      };
       extraPackages = [ ];
       plugins = {
         src = (pkgs.fetchFromGitHub {
@@ -20,15 +27,14 @@
           o = "fzopen";
           v = "imgview";
           p = "preview-tui";
+          w = "wallpaper";
         };
       };
     };
   };
   home = {
     sessionVariables = {
-      # NNN_TMPFILE = "\${HOME}/.cache/nnn/tmpfile";
       NNN_FIFO = "\${HOME}/.cache/nnn/nnn.fifo";
-      # NNN_PLUG = "f:finder;o:fzopen;v:imgview;p:preview-tui";
     };
   };
 }
