@@ -51,18 +51,6 @@
           "tray"
           "custom/notifications"
         ];
-        "custom/launcher" = {
-          "format" = " ";
-          "on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
-          "tooltip" = false;
-        };
-        "custom/wall" = {
-          "on-click" = "wallpaper_random";
-          "on-click-middle" = "default_wall";
-          "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
-          "format" = "󰠖";
-          "tooltip" = false;
-        };
         "custom/cava-internal" = {
           "exec" = "sleep 1s && cava-internal";
           "tooltip" = false;
