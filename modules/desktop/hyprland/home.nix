@@ -5,7 +5,7 @@
   programs = {
     fish = {
       loginShellInit = ''
-        set TTY (tty)
+        set TTY1 (tty)
         [ "$TTY1" = "/dev/tty1" ] && exec Hyprland
       '';
     };
