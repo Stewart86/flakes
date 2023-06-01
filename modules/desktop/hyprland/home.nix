@@ -3,11 +3,10 @@
     (import ../../environment/hypr-variables.nix)
   ];
   programs = {
-    bash = {
-      initExtra = ''
-        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-          Hyprland
-        fi
+    fish = {
+      loginShellInit = ''
+        set TTY (tty)
+        [ "$TTY1" = "/dev/tty1" ] && exec Hyprland
       '';
     };
   };

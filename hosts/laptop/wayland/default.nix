@@ -19,6 +19,7 @@
   users.users.root.initialHashedPassword = "$6$88FQ7FvPTjgmlVtw$xqY5.Ux1WPJniFpukO6RAtbLVf6XXTU2ulU6zvmiuU/lhtKIIFZux2IrQ2al/nd3zPWvJ1OEk0c8m5ACoVAtM.";
   users.users.${user} = {
     initialHashedPassword = "$6$88FQ7FvPTjgmlVtw$xqY5.Ux1WPJniFpukO6RAtbLVf6XXTU2ulU6zvmiuU/lhtKIIFZux2IrQ2al/nd3zPWvJ1OEk0c8m5ACoVAtM.";
+    shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "audio" "docker" ];
     packages = (with pkgs; [
