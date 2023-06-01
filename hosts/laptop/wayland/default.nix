@@ -27,6 +27,7 @@
       whatsapp-for-linux
       slack
       nextcloud-client
+      brave
     ]);
   };
   boot = {
