@@ -32,13 +32,6 @@ let
     killall .waybar-wrapped
     waybar > /dev/null 2>&1 & 
   '';
-  border_color = pkgs.writeShellScriptBin "border_color" ''
-    function border_color {
-      hyprctl keyword general:col.active_border rgb\(ffc0cb\) 
-    }
-
-    socat - UNIX-CONNECT:/tmp/hypr/$(echo $HYPRLAND_INSTANCE_SIGNATURE)/.socket2.sock | while read line; do border_color $line; done
-  '';
 in
 {
   home.packages = [
@@ -46,6 +39,5 @@ in
     grimblast_anotate
     myswaylock
     launch_waybar
-    border_color
   ];
 }
