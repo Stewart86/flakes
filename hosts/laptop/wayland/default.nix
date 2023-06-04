@@ -10,7 +10,12 @@
       ../../../modules/desktop/hyprland
     ];
 
-  microsoft-surface.kernelVersion = "6.1.18";
+  microsoft-surface = {
+    kernelVersion = "6.1.18";
+    ipts.enable = true;
+    surface-control.enable = true;
+  };
+
   hardware.opengl = {
     driSupport = true;
     enable = true;
@@ -83,7 +88,6 @@
       cliphist
       direnv
       flac
-      flameshot
       gimp
       grim
       imagemagick

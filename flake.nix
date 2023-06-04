@@ -36,7 +36,7 @@
         in
         {
           devShells = {
-            #run by `nix devlop` or `nix-shell`(legacy)
+            #run by `nix devlop`
             default = import ./shell.nix { inherit pkgs; };
           };
         }
@@ -46,7 +46,6 @@
       nixosConfigurations = (
         # NixOS configurations
         import ./hosts {
-          # Imports ./hosts/default.nix
           system = "x86_64-linux";
           inherit nixpkgs self inputs user;
         }
