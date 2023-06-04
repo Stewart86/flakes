@@ -1,5 +1,3 @@
-{ lib, pkgs, user, ... }:
-
 {
   programs = {
     mpv = {

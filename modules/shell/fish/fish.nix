@@ -3,6 +3,9 @@
 {
   programs.fish = {
     enable = true;
+    shellAliases = {
+      tree = "lsd --tree";
+    };
     shellAbbrs = {
       ls = "lsd -A";
       ll = "lsd -l -A";

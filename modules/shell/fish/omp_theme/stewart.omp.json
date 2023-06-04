@@ -87,7 +87,7 @@
           "powerline_symbol": "\ue0b0",
           "foreground": "p:foreground",
           "background": "p:teal",
-          "template": " {{ if eq .Env.name \"nix-shell-env\" }}  shell activate  {{ end }}"
+          "template": " {{ if eq .Env.name \"nix-shell-env\" }}<#5277c3> </> shell activate <#5277c3> </>{{ end }}"
         },
         {
           "type": "executiontime",
