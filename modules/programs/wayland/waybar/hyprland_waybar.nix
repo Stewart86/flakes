@@ -101,9 +101,6 @@
             "portable" = "";
             "car" = " ";
           };
-          "states" = {
-            "warning" = 85;
-          };
           "on-click" = "pamixer -t";
           "on-click-right" = "pavucontrol";
           "tooltip" = false;
