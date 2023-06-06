@@ -6,7 +6,6 @@
   ./neofetch
   ./nnn
   ./obs-studio
-  ./ranger
   ./resource_monitor
   ./search
   ./yt-dlp
