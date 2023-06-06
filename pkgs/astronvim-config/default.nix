@@ -8,7 +8,7 @@ stdenv.mkDerivation {
     owner = "astronvim";
     repo = "astronvim";
     rev = "v3.16.1";
-    hash = "sha256-z4UTp6QzZjP40K8E3KwqGUVx88SiuRtywqqoHWBNM4o=";
+    hash = "sha256-rGhJUdgG5VDnDMNz/r3lU286dvcF4TAzW2ixmG8Vofg=";
   };
   user_config = ./config;
 
