@@ -11,7 +11,7 @@
         "g" = "~/GitHub";
         "w" = "~/Pictures/wallpapers";
         "a" = "~/ample/ample-api";
-        "o" = "~/ample/frontend-pos";
+        "F" = "~/ample/frontend-pos";
       };
       extraPackages = [ ];
       plugins = {
