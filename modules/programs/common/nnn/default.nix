@@ -6,12 +6,12 @@
       enable = true;
       package = pkgs.nnn.override { withNerdIcons = true; };
       bookmarks = {
-        "h" = "~";
-        "f" = "~/Flakes";
-        "g" = "~/GitHub";
-        "w" = "~/Pictures/wallpapers";
-        "a" = "~/ample/ample-api";
-        "F" = "~/ample/frontend-pos";
+        h = "~";
+        f = "~/Flakes";
+        g = "~/GitHub";
+        w = "~/Pictures/wallpapers";
+        a = "~/ample/ample-api";
+        F = "~/ample/frontend-pos";
       };
       extraPackages = [ ];
       plugins = {
