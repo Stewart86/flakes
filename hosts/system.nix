@@ -41,7 +41,6 @@
       lsd
       neofetch
       neovim
-      ranger
       socat
       wget
       xdg-utils
