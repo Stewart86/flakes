@@ -13,26 +13,7 @@
       withRuby = false;
 
       # extraPackages = with pkgs; [ ];
-      plugins = with pkgs.vimPlugins; [
-        nvim-treesitter.withPlugins
-        (p: [
-          p.tree-sitter-nix
-          p.tree-sitter-python
-          p.tree-sitter-lua
-          p.tree-sitter-javascript
-          p.tree-sitter-css
-          p.tree-sitter-html
-          p.tree-sitter-toml
-          p.tree-sitter-yaml
-          p.tree-sitter-json
-          p.tree-sitter-rust
-          p.tree-sitter-bash
-          p.tree-sitter-fish
-          p.tree-sitter-go
-          p.tree-sitter-markdown
-        ])
-      ];
-
+      # plugins = with pkgs.vimPlugins; [];
     };
   };
   home = {
