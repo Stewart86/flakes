@@ -25,9 +25,9 @@
       oh-my-posh
     ];
   };
-  home.file.".config/fish/functions/n.fish".text = import ./functions/n.nix;
-  home.file.".config/fish/functions/sd.fish".text = import ./functions/sd.nix;
-  home.file.".config/fish/functions/vsd.fish".text = import ./functions/vsd.nix;
+  home.file.".config/fish/functions/n.fish".source = ./functions/n.fish;
+  home.file.".config/fish/functions/sd.fish".source = ./functions/sd.fish;
+  home.file.".config/fish/functions/vsd.fish".source = ./functions/vsd.fish;
 
   home.file.".config/fish/fish_variables".text = import ./fish_variables.nix;
   home.file.".config/fish/omp_theme/stewart.omp.json".source = ./omp_theme/stewart.omp.json;
