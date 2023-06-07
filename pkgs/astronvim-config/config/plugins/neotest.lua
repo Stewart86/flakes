@@ -22,9 +22,9 @@ return {
   keys = {
     { "<leader>Tt", function() require("neotest").run.run() end,                  "Run test" },
     { "<leader>Ts", function() require("neotest").summary.toggle() end,           "Toggle summary" },
-    { "<leader>T ", function() require("neotest").output.open() end,              "Open output" },
-    { "<leader>T ", function() require("neotest").output_panel.toggle() end,      "Toggle output panel" },
-    { "<leader>T ", function() require("neotest").run.run(vim.fn.expand "%") end, "Run current file" },
+    { "<leader>To", function() require("neotest").output.open() end,              "Open output" },
+    { "<leader>TP", function() require("neotest").output_panel.toggle() end,      "Toggle output panel" },
+    { "<leader>Tf", function() require("neotest").run.run(vim.fn.expand "%") end, "Run current file" },
   },
   dependencies = {
     "nvim-neotest/neotest-python",
