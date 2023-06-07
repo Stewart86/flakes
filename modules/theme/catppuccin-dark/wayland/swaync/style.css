@@ -9,15 +9,12 @@
   margin-top: 20px;
 }
 
-.notification-row:last-child {
-  margin-bottom: 20px;
-}
-
 .notification-row {
   transition: all 200ms ease;
   background: @current-line;
   outline: none;
   margin-right: 20px;
+  margin-left: 20px;
   margin-bottom: 3px;
   margin-top: 3px;
   border-radius: 3px;
@@ -100,7 +97,7 @@
 
 .notification-default-action,
 .notification-action {
-  padding: 4px;
+  padding: 0;
   margin: 0;
   box-shadow: none;
   background: @current-line;
