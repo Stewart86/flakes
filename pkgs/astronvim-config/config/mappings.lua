@@ -28,11 +28,6 @@ return {
     },
     ["<leader>T"] = {
       name = "󰙨 Unit Test",
-      t = { function() neotest.run.run() end, "Run test" },
-      s = { function() neotest.summary.toggle() end, "Toggle summary" },
-      o = { function() neotest.output.open() end, "Open output" },
-      p = { function() neotest.output_panel.toggle() end, "Toggle output panel" },
-      f = { function() neotest.run.run(vim.fn.expand "%") end, "Run current file" },
     },
     ["<leader>c"] = {
       function()
