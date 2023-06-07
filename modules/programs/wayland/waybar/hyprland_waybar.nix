@@ -25,12 +25,11 @@
       };
       style = builtins.readFile ./style.css;
       settings = [{
-        "layer" = "top";
-        "position" = "top";
+        layer = "top";
+        position = "top";
         modules-left = [
           "custom/launcher"
           "wlr/workspaces"
-          # "idle_inhibitor"
           "custom/wall"
           "mpd"
           "custom/cava-internal"
@@ -45,7 +44,6 @@
           "cpu"
           "disk"
           "temperature"
-          # "network"
           "battery"
           "custom/powermenu"
           "tray"
@@ -165,20 +163,10 @@
           "smooth-scrolling-threshold" = 5;
           "tooltip-format" = "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})";
         };
-        "network" = {
-          "interval" = 1;
-          "format-wifi" = "󰖩";
-          "format-ethernet" = "󰌗";
-          "format-linked" = "󰌗";
-          # "format-wifi" = "󰖩 {essid}";
-          # "format-ethernet" = "󰌗 {ifname} ({ipaddr})";
-          # "format-linked" = "󰌗 {essid} (No IP)";
-          "format-disconnected" = "󰌙";
-          "tooltip" = false;
-        };
         "temperature" = {
           "tooltip" = false;
-          "format" = " {temperatureC}°C";
+          "format" = "{icon} {temperatureC}°C";
+          "format-icons" = [ "" "" "" "" "" ];
         };
         "hyprland/window" = {
           "format" = "{}";
