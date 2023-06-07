@@ -5,6 +5,9 @@
 @define-color current-line rgba(30, 30, 46, 0.4);
 @define-color comment rgb(98, 114, 164);
 
+.notification-row:first-child {
+  margin-top: 20px;
+}
 .notification-row {
   transition: all 200ms ease;
   background: @current-line;
@@ -40,7 +43,7 @@
   border-radius: 3px;
   margin: 0px;
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
-  padding: 2;
+  padding: 0;
 }
 
 /* Uncomment to enable specific urgency colors
