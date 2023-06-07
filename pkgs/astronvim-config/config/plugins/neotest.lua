@@ -19,13 +19,6 @@ return {
     }
   end,
   ft = { "rust", "python" },
-  keys = {
-    { "<leader>Tt", function() require("neotest").run.run() end,                  "Run test" },
-    { "<leader>Ts", function() require("neotest").summary.toggle() end,           "Toggle summary" },
-    { "<leader>To", function() require("neotest").output.open() end,              "Open output" },
-    { "<leader>TP", function() require("neotest").output_panel.toggle() end,      "Toggle output panel" },
-    { "<leader>Tf", function() require("neotest").run.run(vim.fn.expand "%") end, "Run current file" },
-  },
   dependencies = {
     "nvim-neotest/neotest-python",
     "rouge8/neotest-rust",
