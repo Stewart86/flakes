@@ -8,11 +8,16 @@
 .notification-row:first-child {
   margin-top: 20px;
 }
+
+.notification-row:last-child {
+  margin-bottom: 20px;
+}
+
 .notification-row {
   transition: all 200ms ease;
   background: @current-line;
   outline: none;
-  margin-right: 3px;
+  margin-right: 20px;
   margin-bottom: 3px;
   margin-top: 3px;
   border-radius: 3px;
