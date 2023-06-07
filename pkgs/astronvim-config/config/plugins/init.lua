@@ -67,7 +67,3 @@ return {
 -- andythigpen/nvim-coverage
 -- EthanJWright/vs-tasks.nvim
 -- vuki656/package-info.nvim
--- markdown preview
---
--- to build
--- python dependencies management
