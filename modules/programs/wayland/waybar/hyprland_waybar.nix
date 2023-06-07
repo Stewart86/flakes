@@ -93,8 +93,8 @@
           "format-icons" = {
             "default" = [ "" "" "" ];
             "bluetooth" = "";
-            "headphone" = "";
-            "headset" = "";
+            "headphone" = "󰋋";
+            "headset" = "󰋎";
             "phone" = "";
             "portable" = "";
             "car" = " ";
@@ -195,7 +195,7 @@
           "tooltip" = false;
         };
         "tray" = {
-          "icon-size" = 15;
+          "icon-size" = 10;
           "spacing" = 15;
         };
       }];
