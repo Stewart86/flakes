@@ -32,7 +32,6 @@
       whatsapp-for-linux
       slack
       nextcloud-client
-      brave
     ]);
   };
   boot = {
@@ -84,6 +83,7 @@
     systemPackages = with pkgs; [
       alsa-lib
       alsa-utils
+      brave
       cinnamon.nemo
       cliphist
       direnv
