@@ -93,7 +93,6 @@
       imagemagick
       libnotify
       networkmanagerapplet
-      nodejs
       pavucontrol
       polkit_gnome
       pulsemixer
