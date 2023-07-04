@@ -16,6 +16,6 @@
   security.pam.services.swaylock.text = "auth include login";
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+    wlr.enable = false;
   };
 }
