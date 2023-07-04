@@ -1,1 +1,5 @@
-return function(opts) opts.cmd = { "eslint_d", "--stdio" } end
+return function()
+  return {
+    cmd = { "eslint_d", "--stdio" },
+  }
+end
