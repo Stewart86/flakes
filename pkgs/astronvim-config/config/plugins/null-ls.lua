@@ -11,7 +11,8 @@ return {
       require("null-ls").builtins.formatting.beautysh,
       require("null-ls").builtins.formatting.rustfmt,
       require("null-ls").builtins.formatting.ruff,
-      require("null-ls").builtins.diagnostics.eslint_d,
+      require("null-ls").builtins.diagnostics.eslint,
+      require("null-ls").builtins.code_actions.eslint,
     },
   },
 }
