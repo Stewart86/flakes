@@ -21,7 +21,6 @@
       #-- LSP --#
       nodePackages_latest.typescript
       nodePackages_latest.eslint_d
-      nodePackages_latest.prettier_d_slim
       nodePackages_latest.typescript-language-server
       nodePackages_latest.vscode-langservers-extracted
       nodePackages_latest.bash-language-server
@@ -41,7 +40,7 @@
       nixpkgs-fmt
       rustfmt
       beautysh
-      nodePackages.prettier
+      nodePackages_latest.prettier
       ruff
       yamlfmt
       #-- Debug --#
