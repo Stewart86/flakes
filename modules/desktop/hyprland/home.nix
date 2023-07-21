@@ -14,7 +14,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemdIntegration = true;
-    nvidiaPatches = false;
+    enableNvidiaPatches = false;
     extraConfig = builtins.readFile ./hyprland.conf;
   };
 }
