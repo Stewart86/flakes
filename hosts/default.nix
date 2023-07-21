@@ -23,8 +23,6 @@ in
           users.${user} = {
             imports = [
               (import ./laptop/wayland/home.nix)
-            ] ++ [
-              inputs.hyprland.homeManagerModules.default
             ];
           };
         };
