@@ -7,10 +7,6 @@
       hyprpicker.url = "github:hyprwm/hyprpicker";
       hypr-contrib.url = "github:hyprwm/contrib";
       flake-utils.url = "github:numtide/flake-utils";
-      hyprland = {
-        url = "github:hyprwm/Hyprland";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
       home-manager = {
         url = "github:nix-community/home-manager";
         inputs.nixpkgs.follows = "nixpkgs";
