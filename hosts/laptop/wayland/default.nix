@@ -83,7 +83,7 @@
     systemPackages = with pkgs; [
       alsa-lib
       alsa-utils
-      # brave
+      brave
       cinnamon.nemo
       cliphist
       direnv
