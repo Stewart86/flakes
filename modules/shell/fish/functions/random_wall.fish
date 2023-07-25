@@ -1,3 +1,3 @@
 function random_wall
-  fd . ~/Pictures/wallpapers/ -t file -e jpg -e png | shuf -n1 | swww img
+  swww img (fd . ~/Pictures/wallpapers/ -t file -e jpg -e png | shuf -n1)
 end
