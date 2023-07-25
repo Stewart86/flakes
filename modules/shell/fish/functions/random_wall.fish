@@ -1,5 +1,6 @@
 function random_wall
-  swww kill
-  swww init
+  if pgrep -f swww > /dev/null
+    swww init
+  end
   swww img (fd . ~/Pictures/wallpapers/ -t file -e jpg -e png | shuf -n1)
 end
