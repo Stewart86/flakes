@@ -7,8 +7,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "astronvim";
     repo = "astronvim";
-    rev = "v3.33.4";
-    hash = "sha256-utGG1U9p3a5ynRcQys1OuD5J0LjkIQipD0TX8zW66/4=";
+    rev = "v3.34.1";
+    hash = "sha256-CndgztlT3KF5MsjpWnxkGNtJR/xuSNDvhVhbjlFCXG4=";
   };
   user_config = ./config;
 
