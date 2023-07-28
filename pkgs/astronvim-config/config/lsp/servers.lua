@@ -10,7 +10,6 @@ return {
   "jsonls",
   "html",
   "eslint",
-  "eslint_d",
   "cssls",
   "nil_ls",
 }
