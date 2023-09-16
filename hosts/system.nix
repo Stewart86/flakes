@@ -34,7 +34,6 @@
     binsh = "${pkgs.dash}/bin/dash";
     shells = with pkgs; [ fish ];
     systemPackages = with pkgs; [
-      exa
       gdu
       git
       killall
