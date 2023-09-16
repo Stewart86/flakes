@@ -1,4 +1,5 @@
 function random_wall
+  sleep 8
   if not pgrep -f swww > /dev/null
     swww init
     sleep 8
