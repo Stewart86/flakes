@@ -58,6 +58,7 @@
           "on-click" = "activate";
           "all-outputs" = true;
           "active-only" = true;
+          "show-special" = true;
           "on-scroll-up" = "hyprctl dispatch workspace e+1";
           "on-scroll-down" = "hyprctl dispatch workspace e-1";
           "format-icons" = {
@@ -67,12 +68,12 @@
             "4" = "󰇍";
             "5" = "󰇎";
             "6" = "󰇏";
-            "󰇮" = "mail";
-            "" = "music";
-            "󰖣" = "whatsapp";
-            "󰒱" = "slack";
-            "" = "telegram";
-            "󰖟" = "browser";
+            "mail" = "󰇮";
+            "music" = "";
+            "whatsapp" = "󰖣";
+            "slack" = "󰒱";
+            "telegram" = "";
+            "browser" = "󰖟";
           };
         };
         "backlight" = {
