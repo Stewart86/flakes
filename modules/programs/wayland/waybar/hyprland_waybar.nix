@@ -56,6 +56,8 @@
         "hyprland/workspaces" = {
           "format" = "{icon}";
           "on-click" = "activate";
+          "all-outputs" = true;
+          "active-only" = true;
           "on-scroll-up" = "hyprctl dispatch workspace e+1";
           "on-scroll-down" = "hyprctl dispatch workspace e-1";
           "format-icons" = {
@@ -66,14 +68,6 @@
             "5" = "󰇎";
             "6" = "󰇏";
           };
-        };
-        "idle_inhibitor" = {
-          "format" = "{icon}";
-          "format-icons" = {
-            "activated" = "";
-            "deactivated" = "";
-          };
-          "tooltip" = false;
         };
         "backlight" = {
           "device" = "intel_backlight";
