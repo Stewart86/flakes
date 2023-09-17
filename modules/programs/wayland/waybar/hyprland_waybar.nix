@@ -67,6 +67,12 @@
             "4" = "󰇍";
             "5" = "󰇎";
             "6" = "󰇏";
+            "󰇮" = "mail";
+            "" = "music";
+            "󰖣" = "whatsapp";
+            "󰒱" = "slack";
+            "" = "telegram";
+            "󰖟" = "browser";
           };
         };
         "backlight" = {
