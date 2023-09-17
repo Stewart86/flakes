@@ -53,7 +53,7 @@
           "exec" = "sleep 1s && cava-internal";
           "tooltip" = false;
         };
-        "wlr/workspaces" = {
+        "hyprland/workspaces" = {
           "format" = "{icon}";
           "on-click" = "activate";
           "on-scroll-up" = "hyprctl dispatch workspace e+1";
