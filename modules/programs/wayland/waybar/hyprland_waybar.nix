@@ -29,7 +29,7 @@
         position = "top";
         modules-left = [
           "custom/launcher"
-          "wlr/workspaces"
+          "hyprland/workspaces"
           "custom/wall"
           "mpd"
           "custom/cava-internal"
