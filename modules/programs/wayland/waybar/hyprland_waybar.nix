@@ -68,10 +68,7 @@
             "4" = "󰇍";
             "5" = "󰇎";
             "6" = "󰇏";
-            "active" = "";
-            "default" = "";
-            "urgent" = "";
-            "special" = "";
+            "special" = "󱝂";
           };
         };
         "backlight" = {
