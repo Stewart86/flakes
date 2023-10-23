@@ -144,3 +144,5 @@ After tweaking the configuration around, old generations might pile up. To remov
 sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system
 sudo /nix/var/nix/profiles/system/bin/switch-to-configuration switch
 ```
+
+test
