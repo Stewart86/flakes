@@ -91,6 +91,7 @@
       gimp
       grim
       imagemagick
+      inkscape
       libnotify
       networkmanagerapplet
       nodejs
