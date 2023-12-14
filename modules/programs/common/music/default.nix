@@ -7,7 +7,7 @@
       mpc-cli
       go-musicfox
       youtube-tui
-      youtube-music
+      # youtube-music
     ];
   };
   programs = {
