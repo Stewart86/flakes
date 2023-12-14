@@ -93,6 +93,7 @@
       imagemagick
       inkscape
       libnotify
+      mongodb-compass
       networkmanagerapplet
       nodejs
       pavucontrol

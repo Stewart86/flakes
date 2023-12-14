@@ -7,6 +7,7 @@
       mpc-cli
       go-musicfox
       youtube-tui
+      # disabling youtube-music because it's electron is outdated
       # youtube-music
     ];
   };
