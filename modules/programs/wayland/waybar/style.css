@@ -23,7 +23,7 @@
 }
 
 window#waybar {
-  background: background-color;
+  background: transparent;
 }
 window > box {
   margin-top: 5px;
