@@ -5,6 +5,7 @@
     {
       nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
       hyprpicker.url = "github:hyprwm/hyprpicker";
+      hyprland.url = "github:hyprwm/Hyprland";
       hypr-contrib.url = "github:hyprwm/contrib";
       flake-utils.url = "github:numtide/flake-utils";
       home-manager = {
