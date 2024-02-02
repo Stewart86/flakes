@@ -96,6 +96,7 @@
       mongodb-compass
       networkmanagerapplet
       nodejs
+      obsidian
       pavucontrol
       polkit_gnome
       pulsemixer
