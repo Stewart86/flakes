@@ -33,7 +33,7 @@ return {
       },
     },
     -- gitblame settings for less distraction
-    gitblame_delay = 20000,
+    gitblame_delay = 5000,
     gitblame_message_when_not_committed = "...",
     gitblame_date_format = "%r",
     gitblame_message_template = "          : <author> 🕒 <date> 📝 <summary>",

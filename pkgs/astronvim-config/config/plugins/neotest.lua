@@ -13,18 +13,19 @@ return {
     }, neotest_ns)
     require("neotest").setup {
       adapters = {
-        -- require "neotest-rust",
         require "neotest-python",
+        require "neotest-jest",
       },
+      jestCommand = require("neotest-jest.jest-util").getJestCommand(vim.fn.expand "%:p:h") .. " --watch",
     }
   end,
   ft = { "rust", "python" },
   dependencies = {
     "nvim-neotest/neotest-python",
+    "nvim-neotest/neotest-jest",
     "rouge8/neotest-rust",
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
     "antoinemadec/FixCursorHold.nvim",
-    -- "nvim-neotest/neotest-rust",
   },
 }

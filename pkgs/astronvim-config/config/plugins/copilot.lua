@@ -11,6 +11,9 @@ return {
             accept_word = "<M-w>",
           },
         },
+        filetypes = {
+          markdown = true,
+        },
       }
     end,
   },
