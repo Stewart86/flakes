@@ -29,6 +29,7 @@ return {
     ["<leader>T"] = {
       name = "󰙨 Unit Test",
       t = { function() neotest.run.run() end, "Run test" },
+      w = { function() neotest.watch.toggle() end, "Toggle watch test" },
       s = { function() neotest.summary.toggle() end, "Toggle summary" },
       o = { function() neotest.output.open() end, "Open output" },
       p = { function() neotest.output_panel.toggle() end, "Toggle output panel" },
