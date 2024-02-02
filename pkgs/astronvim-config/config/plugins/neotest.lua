@@ -16,7 +16,8 @@ return {
         require "neotest-python",
         require "neotest-jest",
       },
-      jestCommand = require("neotest-jest.jest-util").getJestCommand(vim.fn.expand "%:p:h") .. " --watch",
+      jestCommand = "pnpm test",
+      cwd = function() return vim.fn.getcwd() end,
     }
   end,
   ft = { "rust", "python" },
