@@ -19,6 +19,8 @@
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_DESKTOP = "Hyprland";
       XDG_BIN_HOME = "\${HOME}/.local/bin";
+      GDK_SCALE = "2";
+      XCURSOR_SIZE = "32";
     };
   };
 }

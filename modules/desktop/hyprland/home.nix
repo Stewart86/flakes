@@ -17,5 +17,6 @@
     xwayland.enable = true;
     enableNvidiaPatches = false;
     extraConfig = builtins.readFile ./hyprland.conf;
+    debug = true;
   };
 }
