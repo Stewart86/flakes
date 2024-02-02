@@ -11,6 +11,7 @@ return {
       auto_install = true,
       highlight = { disable = { "help" } },
       matchup = { enable = true },
+      ensure_installed = { "markdown", "markdown_inline" },
     },
   },
   {

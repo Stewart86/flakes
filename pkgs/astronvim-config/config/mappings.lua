@@ -43,6 +43,20 @@ return {
       end,
       desc = "Close buffer",
     },
+    ["<leader>z"] = {
+      name = "Obsidian",
+      f = { "<cmd>ObsidianFollowLink<CR>", "Follow Link" },
+      t = { "<cmd>ObsidianToday<CR>", "Today" },
+      n = { "<cmd>ObsidianNewe<CR>", "New" },
+      ln = { "<cmd>ObsidianLinkNew<CR>", "Link new" },
+      l = { "<cmd>ObsidianLink<CR>", "Link" },
+      o = { "<cmd>ObsidianOpen<CR>", "Open" },
+      r = { "<cmd>ObsidianRename<CR>", "Rename" },
+      s = { "<cmd>ObsidianSearch<CR>", "Search" },
+      tmr = { "<cmd>ObsidianTomorrow<CR>", "Tomorrow" },
+      tg = { "<cmd>ObsidianTags<CR>", "Tag" },
+      ch = { "<cmd>ObsidianCheck<CR>", "Check" },
+    },
   },
   t = {
     -- setting a mapping to false will disable it
