@@ -38,5 +38,6 @@ return {
     gitblame_date_format = "%r",
     gitblame_message_template = "          : <author> 🕒 <date> 📝 <summary>",
     diagnostic_enable_virtual_text = false,
+    conceallevel = 1,
   },
 }
