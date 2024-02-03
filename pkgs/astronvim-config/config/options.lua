@@ -9,6 +9,7 @@ return {
     foldcolumn = "1",
     background = "dark",
     swapfile = false,
+    conceallevel = 1,
   },
   g = {
     mapleader = " ",
@@ -38,6 +39,5 @@ return {
     gitblame_date_format = "%r",
     gitblame_message_template = "          : <author> 🕒 <date> 📝 <summary>",
     diagnostic_enable_virtual_text = false,
-    conceallevel = 1,
   },
 }

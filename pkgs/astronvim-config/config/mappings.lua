@@ -47,7 +47,7 @@ return {
       name = "Obsidian",
       f = { "<cmd>ObsidianFollowLink<CR>", "Follow Link" },
       t = { "<cmd>ObsidianToday<CR>", "Today" },
-      n = { "<cmd>ObsidianNewe<CR>", "New" },
+      n = { "<cmd>ObsidianNew<CR>", "New" },
       ln = { "<cmd>ObsidianLinkNew<CR>", "Link new" },
       l = { "<cmd>ObsidianLink<CR>", "Link" },
       o = { "<cmd>ObsidianOpen<CR>", "Open" },
