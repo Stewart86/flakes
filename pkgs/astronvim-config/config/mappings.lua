@@ -14,9 +14,6 @@ return {
     ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
     ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
     ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
-    -- page up and down with centre cursor
-    ["<C-d>"] = { "<C-d>zz", desc = "page down with center cursor" },
-    ["<C-u>"] = { "<C-u>zz", desc = "page up with center cursor" },
     -- buffer switch
     ["L"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
@@ -46,7 +43,7 @@ return {
     ["<leader>z"] = {
       name = "Obsidian",
       f = { "<cmd>ObsidianFollowLink<CR>", "Follow Link" },
-      t = { "<cmd>ObsidianToday<CR>", "Today" },
+      d = { "<cmd>ObsidianToday<CR>", "Today" },
       n = { "<cmd>ObsidianNew<CR>", "New" },
       ln = { "<cmd>ObsidianLinkNew<CR>", "Link new" },
       l = { "<cmd>ObsidianLink<CR>", "Link" },

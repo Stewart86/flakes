@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+
   programs = {
     neovim = {
       defaultEditor = true;
@@ -13,7 +14,9 @@
       withRuby = false;
 
       # extraPackages = with pkgs; [ ];
-      # plugins = with pkgs.vimPlugins; [];
+      plugins = with pkgs.vimPlugins; [
+        nvim-treesitter.withAllGrammars
+      ];
     };
   };
   home = {
@@ -22,19 +25,20 @@
       nodePackages_latest.typescript
       nodePackages_latest.eslint_d
       nodePackages_latest.typescript-language-server
-      nodePackages_latest.vscode-langservers-extracted
       nodePackages_latest.bash-language-server
       nodePackages_latest."@tailwindcss/language-server"
+      vscode-langservers-extracted
       nodePackages.jsonlint
       nil
       rnix-lsp
       lua-language-server
       pyright
       rust-analyzer
-      taplo
+      # taplo
       #-- tree-sitter --#
       tree-sitter
       #-- format --#
+      prettierd
       stylua
       black
       nixpkgs-fmt

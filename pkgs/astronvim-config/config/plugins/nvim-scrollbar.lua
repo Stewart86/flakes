@@ -1,4 +1,16 @@
 return {
   "petertriho/nvim-scrollbar",
-  config = function() require("scrollbar").setup {} end,
+  opts = function(_, opts)
+    require("astronvim.utils").extend_tbl(opts, {
+      handlers = {
+        gitsigns = require("astronvim.utils").is_available "gitsigns.nvim",
+        search = require("astronvim.utils").is_available "nvim-hlslens",
+        ale = require("astronvim.utils").is_available "ale",
+      },
+      handle = {
+        color = { bg = "#2a2a37" },
+      },
+    })
+  end,
+  event = "User AstroFile",
 }

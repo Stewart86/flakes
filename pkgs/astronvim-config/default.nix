@@ -1,19 +1,31 @@
-{ stdenv, lib, fetchFromGitHub }:
+{ pkgs, stdenv, lib, fetchFromGitHub }:
 
 stdenv.mkDerivation {
   pname = "astronvim-config";
-  version = "20240206";
+  version = "20240207-1";
 
   src = fetchFromGitHub {
     owner = "astronvim";
     repo = "astronvim";
-    rev = "v3.34.1";
-    hash = "sha256-CndgztlT3KF5MsjpWnxkGNtJR/xuSNDvhVhbjlFCXG4=";
+    rev = "v3.43.2";
+    hash = "sha256-zAvuwDLyROsawVlRsxHAR82coUpyZm/Piha0TWMs7sk=";
   };
+
+  parser = "${pkgs.symlinkJoin {
+      name = "treesitter-parsers";
+      paths = (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
+        c
+        lua
+        query
+      ])).dependencies;
+    }}/parser";
+
   user_config = ./config;
 
   buildPhase = ''
     ls
+    mkdir parser
+    cp -r $parser/* parser
     mkdir lua/user
     cp -r $user_config/* lua/user
     ls lua/user

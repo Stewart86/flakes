@@ -6,7 +6,6 @@ return {
       -- you must download code formatter by yourself!
       require("null-ls").builtins.formatting.stylua,
       require("null-ls").builtins.formatting.black,
-      require("null-ls").builtins.formatting.prettier,
       require("null-ls").builtins.formatting.nixpkgs_fmt,
       require("null-ls").builtins.formatting.beautysh,
       require("null-ls").builtins.formatting.rustfmt,
@@ -25,11 +24,8 @@ return {
           fileTypes = {
             "javascript",
             "javascriptreact",
-            "typescript",
-            "typescriptreact",
             "json",
             "yaml",
-            "markdown",
             "vue",
             "html",
             "css",
