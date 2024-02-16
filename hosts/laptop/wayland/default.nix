@@ -105,6 +105,7 @@
       wf-recorder
       wl-clipboard
       wlr-randr
+      zoxide
     ];
   };
   services = {
