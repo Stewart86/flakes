@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation {
   pname = "astronvim-config";
-  version = "20240207-1";
+  version = "20240223";
 
   src = fetchFromGitHub {
     owner = "astronvim";

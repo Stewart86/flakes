@@ -9,7 +9,6 @@ return {
   "taplo",
   "jsonls",
   "html",
-  "eslint",
   "cssls",
   "nil_ls",
 }

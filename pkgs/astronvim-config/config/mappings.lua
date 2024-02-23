@@ -46,7 +46,7 @@ return {
       d = { "<cmd>ObsidianToday<CR>", "Today" },
       n = { "<cmd>ObsidianNew<CR>", "New" },
       ln = { "<cmd>ObsidianLinkNew<CR>", "Link new" },
-      l = { "<cmd>ObsidianLink<CR>", "Link" },
+      i = { "<cmd>ObsidianLink<CR>", "Link" },
       o = { "<cmd>ObsidianOpen<CR>", "Open" },
       r = { "<cmd>ObsidianRename<CR>", "Rename" },
       s = { "<cmd>ObsidianSearch<CR>", "Search" },
