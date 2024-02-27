@@ -26,6 +26,7 @@
       nodePackages_latest."@tailwindcss/language-server"
       vscode-langservers-extracted
       nodePackages.jsonlint
+      luajitPackages.luacheck
       nil
       rnix-lsp
       lua-language-server
