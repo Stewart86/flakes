@@ -35,10 +35,12 @@
       pyright
       rust-analyzer
       deadnix
+      marksman
       # taplo
       #-- tree-sitter --#
       tree-sitter
       #-- format --#
+      alejandra
       prettierd
       stylua
       black
