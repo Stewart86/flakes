@@ -34,6 +34,7 @@
       lua-language-server
       pyright
       rust-analyzer
+      deadnix
       # taplo
       #-- tree-sitter --#
       tree-sitter

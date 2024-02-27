@@ -1,3 +1,4 @@
+local utils = require "astronvim.utils"
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.typescript" },
@@ -27,6 +28,19 @@ return {
   { import = "astrocommunity.scrolling.neoscroll-nvim" },
 
   { import = "astrocommunity.utility.noice-nvim" },
+  {
+    "folke/noice.nvim",
+    opts = function(_, opts)
+      return utils.extend_tbl(opts, {
+        lsp = {
+          signature = {
+            enabled = false,
+          },
+          }
+        }
+      )
+    end,
+  },
   { import = "astrocommunity.utility.nvim-toggler" },
 
   { import = "astrocommunity.test.nvim-coverage" },
