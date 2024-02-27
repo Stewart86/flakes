@@ -88,6 +88,7 @@
       cliphist
       direnv
       flac
+      gh
       gimp
       grim
       imagemagick
