@@ -1,12 +1,14 @@
-{ pkgs, user, ... }:
-
-{
+{ pkgs
+, user
+, ...
+}: {
   imports =
-    (import ../../../modules/hardware) ++
-    [
+    (import ../../../modules/hardware)
+    ++ [
       ../hardware-configuration.nix
       ../../../modules/fonts
-    ] ++ [
+    ]
+    ++ [
       ../../../modules/desktop/hyprland
     ];
 
@@ -27,12 +29,12 @@
     shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "audio" "docker" ];
-    packages = (with pkgs; [
+    packages = with pkgs; [
       tdesktop
       whatsapp-for-linux
       slack
       nextcloud-client
-    ]);
+    ];
   };
   boot = {
     supportedFilesystems = [ "ntfs" ];
@@ -86,6 +88,7 @@
       brave
       cinnamon.nemo
       cliphist
+      discord
       direnv
       flac
       gh
