@@ -109,6 +109,7 @@
       wf-recorder
       wl-clipboard
       wlr-randr
+      xwaylandvideobridge
       zoxide
     ];
   };
