@@ -97,6 +97,10 @@ window#waybar.empty #window {
   margin-right: 0;
 }
 
+#custom-notifications {
+  margin: 6px 15px 6px 0px;
+}
+
 #mode,
 #backlight,
 #pulseaudio,
