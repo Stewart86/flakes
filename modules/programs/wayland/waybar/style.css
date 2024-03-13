@@ -106,7 +106,6 @@ window#waybar.empty #window {
 #pulseaudio,
 #network,
 #custom-powermenu,
-#custom-notifications,
 #tray {
   background: rgb(30, 30, 46);
   margin: 6px 15px 6px 0px;
