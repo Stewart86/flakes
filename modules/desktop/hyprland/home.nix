@@ -4,13 +4,13 @@
   ];
   programs = {
     fish = {
-      # loginShellInit = ''
-      #   set TTY1 (tty)
-      #   [ "$TTY1" = "/dev/tty1" ] && exec Hyprland
-      # '';
+      loginShellInit = ''
+        set TTY1 (tty)
+        [ "$TTY1" = "/dev/tty1" ] && exec Hyprland
+      '';
     };
   };
-  systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
+  systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
