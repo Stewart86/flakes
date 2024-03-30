@@ -17,7 +17,7 @@
       SDL_VIDEODRIVER = "wayland";
       _JAVA_AWT_WM_NONREPARENTING = "1";
       CLUTTER_BACKEND = "wayland";
-      WLR_DRM_DEVICES = "/dev/dri/card0";
+      WLR_DRM_DEVICES = "/dev/dri/card1";
       XDG_SESSION_TYPE = "wayland";
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_DESKTOP = "Hyprland";
