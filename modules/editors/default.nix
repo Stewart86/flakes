@@ -28,7 +28,6 @@
       nodePackages.jsonlint
       luajitPackages.luacheck
       nil
-      rnix-lsp
       lua-language-server
       pyright
       rust-analyzer
