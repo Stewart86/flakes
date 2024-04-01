@@ -1,6 +1,7 @@
-{ pkgs
-, user
-, ...
+{
+  pkgs,
+  user,
+  ...
 }: {
   imports =
     (import ../../../modules/hardware)
@@ -28,7 +29,7 @@
     initialHashedPassword = "$6$88FQ7FvPTjgmlVtw$xqY5.Ux1WPJniFpukO6RAtbLVf6XXTU2ulU6zvmiuU/lhtKIIFZux2IrQ2al/nd3zPWvJ1OEk0c8m5ACoVAtM.";
     shell = pkgs.fish;
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "docker" ];
+    extraGroups = ["wheel" "video" "audio" "docker"];
     packages = with pkgs; [
       tdesktop
       whatsapp-for-linux
@@ -37,7 +38,7 @@
     ];
   };
   boot = {
-    supportedFilesystems = [ "ntfs" ];
+    supportedFilesystems = ["ntfs"];
     loader = {
       grub = {
         configurationLimit = 5;
@@ -77,7 +78,7 @@
 
     evolution = {
       enable = true;
-      plugins = [ pkgs.evolution-ews ];
+      plugins = [pkgs.evolution-ews];
     };
   };
 
@@ -88,7 +89,7 @@
       brave
       cinnamon.nemo
       cliphist
-      discord
+      webcord
       direnv
       flac
       gh
@@ -105,6 +106,7 @@
       pulsemixer
       swaynotificationcenter
       swappy
+      waypaper
       wev
       wf-recorder
       wl-clipboard
@@ -122,8 +124,8 @@
       };
     };
     passSecretService.enable = true;
-    dbus.packages = [ pkgs.gcr ];
-    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+    dbus.packages = [pkgs.gcr];
+    udev.packages = with pkgs; [gnome.gnome-settings-daemon];
     getty.autologinUser = "${user}";
     gvfs.enable = true;
     pipewire = {
@@ -140,9 +142,9 @@
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
-      wantedBy = [ "graphical-session.target" ];
-      wants = [ "graphical-session.target" ];
-      after = [ "graphical-session.target" ];
+      wantedBy = ["graphical-session.target"];
+      wants = ["graphical-session.target"];
+      after = ["graphical-session.target"];
       serviceConfig = {
         Type = "simple";
         ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
