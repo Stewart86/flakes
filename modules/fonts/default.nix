@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     twemoji-color-font
   ];
@@ -244,5 +242,4 @@
       '';
     };
   };
-
 }

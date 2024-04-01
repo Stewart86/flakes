@@ -4,7 +4,6 @@ return {
   "tsserver",
   "bashls",
   "lua_ls",
-  "rnix",
   "tailwindcss",
   "taplo",
   "jsonls",

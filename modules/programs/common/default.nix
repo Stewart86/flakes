@@ -8,6 +8,7 @@
   ./obs-studio
   ./resource_monitor
   ./search
+  ./xdg
   ./yt-dlp
   ./zathura
 ]
