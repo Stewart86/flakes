@@ -32,6 +32,7 @@
       enable = true;
     };
   };
+
   environment = {
     binsh = "${pkgs.dash}/bin/dash";
     shells = with pkgs; [fish];

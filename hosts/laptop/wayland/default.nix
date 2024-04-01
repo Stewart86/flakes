@@ -11,7 +11,8 @@
     ]
     ++ [
       ../../../modules/desktop/hyprland
-    ];
+    ]
+    ++ [(import ../../../modules/greetd)];
 
   microsoft-surface = {
     kernelVersion = "6.6.13";
@@ -114,6 +115,7 @@
       zoxide
     ];
   };
+
   services = {
     gnome = {
       gnome-keyring = {
@@ -156,6 +158,9 @@
   };
 
   security = {
+    # unlock GPG keyring on login
+    pam.services.greetd.enableGnomeKeyring = true;
+
     polkit.enable = true;
 
     sudo = {

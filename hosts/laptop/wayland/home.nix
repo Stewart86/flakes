@@ -1,14 +1,12 @@
-{ user, ... }:
-
-{
+{user, ...}: {
   imports =
-    [ (import ../../../modules/desktop/hyprland/home.nix) ] ++
-    [ (import ../../../modules/scripts) ] ++
-    [ (import ../../../modules/editors) ] ++
-    [ (import ../../../modules/xdg) ] ++
-    (import ../../../modules/shell) ++
-    (import ../../../modules/programs/wayland) ++
-    (import ../../../modules/theme/catppuccin-dark/wayland);
+    [(import ../../../modules/desktop/hyprland/home.nix)]
+    ++ [(import ../../../modules/scripts)]
+    ++ [(import ../../../modules/editors)]
+    ++ [(import ../../../modules/xdg)]
+    ++ (import ../../../modules/shell)
+    ++ (import ../../../modules/programs/wayland)
+    ++ (import ../../../modules/theme/catppuccin-dark/wayland);
 
   home = {
     username = "${user}";
