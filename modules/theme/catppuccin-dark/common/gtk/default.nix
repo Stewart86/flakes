@@ -1,15 +1,14 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.sessionVariables = {
     GTK_THEME = "Catppuccin-Frappe-Pink";
   };
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors;
     name = "Catppuccin-Frappe-Dark";
-    size = 12;
+    size = 16;
+    gtk.enable = true;
+    x11.enable = true;
   };
-  home.pointerCursor.gtk.enable = true;
   gtk = {
     enable = true;
     theme = {
@@ -26,7 +25,7 @@
 
     font = {
       name = "JetBrainsMono Nerd Font";
-      size = 10;
+      size = 9;
     };
     gtk3.extraConfig = {
       gtk-xft-antialias = 1;

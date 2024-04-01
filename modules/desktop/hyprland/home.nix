@@ -17,5 +17,13 @@
     xwayland.enable = true;
     enableNvidiaPatches = false;
     extraConfig = builtins.readFile ./hyprland.conf;
+
+    systemd = {
+      variables = ["--all"];
+      extraCommands = [
+        "systemctl --user stop graphical-session.target"
+        "systemctl --user start hyprland-session.target"
+      ];
+    };
   };
 }
