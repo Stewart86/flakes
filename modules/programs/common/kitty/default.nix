@@ -17,12 +17,23 @@
 
         copy_on_select = "clipboard";
 
+        # colors
+        italic_font = "auto";
+        bold_italic_font = "auto";
+        mouse_hide_wait = 2;
+        cursor_shape = "block";
+        url_color = "#0087bd";
+        url_style = "dotted";
+        confirm_os_window_close = 0;
+        background_opacity = "0.8";
+        dynamic_background_opacity = true;
+
         selection_foreground = "none";
         selection_background = "none";
-
-        # colors
-        background_opacity = "0.7";
       };
+
+      font.name = "jetbrains mono nerd font";
+      font.size = 10;
 
       theme = "Catppuccin-Mocha";
     };
