@@ -2,16 +2,14 @@
   wayland.windowManager.hyprland.settings = {
     windowrule = [];
     windowrulev2 = [
+      "float, class:^(termfloat|danmufloat|floating_btop)$"
+      "size 50% 70%, class:^(termfloat|danmufloat|floating_btop)$"
+      "center 1, class:^(termfloat|danmufloat|floating_btop)$"
+      "animation popin, class:^(termfloat|danmufloat|floating_btop)$"
+
       "float, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx).*"
-      "float, class:^(termfloat|danmufloat)$"
-
-      "size 50% 70%, class:^(termfloat|danmufloat)$"
       "size 50% 70%, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx).*"
-
-      "center 1, class:^(termfloat|danmufloat)$"
       "center 1, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx).*"
-
-      "animation popin, class:^(termfloat|danmufloat)$"
       "animation popin, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx).*"
 
       "float, title:^(Picture-in-Picture)$"

@@ -93,8 +93,8 @@
 
       "$mod,A,exec, grimblast_anotate"
 
-      ",mod,exec, pkill rofi || ~/.config/rofi/launcher.sh"
-      "$mod,Super_L,exec, bash ~/.config/rofi/powermenu.sh"
+      ", Super_L,exec, pkill rofi || ~/.config/rofi/launcher.sh"
+      "$mod, Super_L,exec, bash ~/.config/rofi/powermenu.sh"
       "$mod,V,exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 
       # open notifiacation center
