@@ -1,6 +1,7 @@
-{ pkgs
-, user
-, ...
+{
+  pkgs,
+  user,
+  ...
 }: {
   environment.systemPackages = with pkgs; [
     waybar
@@ -9,7 +10,7 @@
   nixpkgs.overlays = [
     (final: prev: {
       waybar = prev.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+        mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
         postPatch =
           (oldAttrs.postPatch or "")
           + ''
@@ -77,14 +78,14 @@
             "icon-size" = 18;
             "on-click" = "activate";
             "on-click-middle" = "close";
-            "ignore-list" = [ ];
+            "ignore-list" = [];
           };
           "backlight" = {
             "device" = "intel_backlight";
             "on-scroll-up" = "light -A 5";
             "on-scroll-down" = "light -U 5";
             "format" = "{icon} {percent}%";
-            "format-icons" = [ "󰃚" "󰃛" "󰃜" "󰃝" "󰃞" "󰃟" "󰃠" ];
+            "format-icons" = ["󰃚" "󰃛" "󰃜" "󰃝" "󰃞" "󰃟" "󰃠"];
           };
           "pulseaudio" = {
             "scroll-step" = 1;
@@ -95,7 +96,7 @@
             "format-bluetooth" = "{icon} {volume}%";
             "format-bluetooth-muted" = "󰗿";
             "format-icons" = {
-              "default" = [ "" "" "" ];
+              "default" = ["" "" ""];
               "bluetooth" = "";
               "headphone" = "󰋋";
               "headset" = "󰋎";
@@ -115,7 +116,7 @@
               "critical" = 10;
             };
             "format" = "{icon} {capacity}%";
-            "format-icons" = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+            "format-icons" = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
             "format-full" = "{icon} {capacity}%";
             "format-charging" = " {capacity}%";
             "format-plugged" = " {capacity}%";
@@ -139,17 +140,17 @@
             "states" = {
               "warning" = 85;
             };
-            "on-click" = "kitty --title floating_btop sh -c 'btop'";
+            "on-click" = "kitty --class floating_btop sh -c 'btop'";
           };
           "cpu" = {
             "interval" = 2;
             "format" = " {usage}%";
-            "on-click" = "kitty --title floating_btop sh -c 'btop'";
+            "on-click" = "kitty --class floating_btop sh -c 'btop'";
           };
           "disk" = {
             "format" = " {percentage_used}%";
             "tooltip" = true;
-            "on-click" = "kitty --title floating_btop sh -c 'btop'";
+            "on-click" = "kitty --class floating_btop sh -c 'btop'";
             "interval" = 2;
           };
           "mpd" = {
@@ -169,7 +170,7 @@
           "temperature" = {
             "tooltip" = false;
             "format" = "{icon} {temperatureC}°C";
-            "format-icons" = [ "" "" "" "" "" ];
+            "format-icons" = ["" "" "" "" ""];
           };
           "group/hardware" = {
             "orientation" = "inherit";
