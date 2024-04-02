@@ -26,9 +26,10 @@
 
       kb_options = "caps:escape";
       follow_mouse = 1;
-      accel_profile = "flat";
       touchpad = {
         natural_scroll = true;
+        clickfinger_behavior = true;
+        tap-and-drag = true;
       };
     };
 
@@ -41,6 +42,8 @@
       gaps_in = 5;
       gaps_out = 20;
       border_size = 2;
+      resize_on_border = true;
+      hover_icon_on_border = true;
 
       "col.active_border" = "rgb(ffc0cb) rgb(24273A) rgb(24273A) rgb(ffc0cb) 45deg";
       "col.inactive_border" = "rgba(595959aa) rgba(595959aa) rgba(595959aa) rgba(595959aa) 45deg";
@@ -119,6 +122,8 @@
 
       # we do, in fact, want direct scanout
       no_direct_scanout = false;
+      animate_manual_resizes = true;
+      enable_swallow = true;
     };
   };
 }
