@@ -7,10 +7,10 @@
       "center 1, class:^(termfloat|danmufloat|floating_btop)$"
       "animation popin, class:^(termfloat|danmufloat|floating_btop)$"
 
-      "float, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx).*"
-      "size 50% 70%, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx).*"
-      "center 1, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx).*"
-      "animation popin, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx).*"
+      "float, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx|Nextcloud).*"
+      "size 50% 70%, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx|Nextcloud).*"
+      "center 1, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx|Nextcloud).*"
+      "animation popin, title:^(pavucontrol|imv|ncmpcpp|nemo|Bluetooth|Fcitx|Nextcloud).*"
 
       "float, title:^(Picture-in-Picture)$"
       "pin, title:^(Picture-in-Picture)$"
