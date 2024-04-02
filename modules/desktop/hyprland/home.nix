@@ -1,15 +1,10 @@
 {
   imports = [
-    (import ../../environment/hypr-variables.nix)
+    ./variables.nix
+    ./settings.nix
+    ./binds.nix
+    ./rules.nix
   ];
-  # programs = {
-  #   fish = {
-  #     loginShellInit = ''
-  #       set TTY1 (tty)
-  #       [ "$TTY1" = "/dev/tty1" ] && exec Hyprland
-  #     '';
-  #   };
-  # };
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
