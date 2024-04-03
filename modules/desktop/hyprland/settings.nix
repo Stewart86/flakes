@@ -124,7 +124,7 @@
       no_direct_scanout = false;
       animate_manual_resizes = true;
       enable_swallow = true;
-      swallow_regex = "Kitty";
+      swallow_regex = "^(kitty)$";
     };
 
     group = {
