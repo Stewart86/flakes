@@ -8,6 +8,7 @@
   ./obs-studio
   ./resource_monitor
   ./search
+  ./swappy
   ./xdg
   ./yt-dlp
   ./zathura

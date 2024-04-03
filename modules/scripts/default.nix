@@ -1,12 +1,10 @@
-{ pkgs, ... }:
-
-let
+{pkgs, ...}: let
   cava-internal = pkgs.writeShellScriptBin "cava-internal" ''
     cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/ /g;s/1/▁/g;s/2/▂/g;s/3/▃/g;s/4/▄/g;s/5/▅/g;s/6/▆/g;s/7/▇/g;'
   '';
   grimblast_anotate = pkgs.writeShellScriptBin "grimblast_anotate" ''
     FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
-    grimblast --notify --cursor save area $HOME/Pictures/$FILE >> /dev/null 2>&1
+    grimblast --notify --cursor copysave area $HOME/Pictures/$FILE >> /dev/null 2>&1
     swappy -f $HOME/Pictures/$FILE
     rm $HOME/Pictures/$FILE
   '';
@@ -30,10 +28,9 @@ let
   launch_waybar = pkgs.writeShellScriptBin "launch_waybar" ''
     #!/bin/bash
     killall .waybar-wrapped
-    waybar > /dev/null 2>&1 & 
+    waybar > /dev/null 2>&1 &
   '';
-in
-{
+in {
   home.packages = [
     cava-internal
     grimblast_anotate
