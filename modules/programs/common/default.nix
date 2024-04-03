@@ -1,4 +1,6 @@
 [
+  ./chat
+  ./development
   ./gpg
   ./kitty
   ./lazygit

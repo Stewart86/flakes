@@ -32,47 +32,8 @@
     isNormalUser = true;
     extraGroups = ["wheel" "video" "audio" "docker"];
     packages = with pkgs; [
-      tdesktop
-      whatsapp-for-linux
-      slack
       nextcloud-client
     ];
-  };
-  boot = {
-    supportedFilesystems = ["ntfs"];
-    loader = {
-      grub = {
-        configurationLimit = 5;
-      };
-      systemd-boot = {
-        enable = true;
-        consoleMode = "auto";
-      };
-      efi = {
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot";
-      };
-      timeout = 1;
-    };
-    kernelParams = [
-      "quiet"
-    ];
-    consoleLogLevel = 0;
-    initrd.verbose = false;
-  };
-
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5 = {
-      addons = with pkgs; [
-        fcitx5-rime
-        fcitx5-chinese-addons
-        fcitx5-table-extra
-        fcitx5-pinyin-moegirl
-        fcitx5-pinyin-zhwiki
-      ];
-      waylandFrontend = true;
-    };
   };
 
   programs = {
@@ -83,62 +44,6 @@
     evolution = {
       enable = true;
       plugins = [pkgs.evolution-ews];
-    };
-  };
-
-  environment = {
-    systemPackages = with pkgs; [
-      alsa-lib
-      alsa-utils
-      brave
-      cinnamon.nemo
-      cliphist
-      webcord
-      direnv
-      flac
-      gh
-      gimp
-      grim
-      imagemagick
-      inkscape
-      libnotify
-      mongodb-compass
-      networkmanagerapplet
-      nodejs
-      pavucontrol
-      polkit_gnome
-      pulsemixer
-      swaynotificationcenter
-      swappy
-      waypaper
-      wev
-      wf-recorder
-      wl-clipboard
-      wlr-randr
-      zoxide
-    ];
-  };
-
-  services = {
-    gnome = {
-      gnome-keyring = {
-        enable = true;
-      };
-      evolution-data-server = {
-        enable = true;
-      };
-    };
-    passSecretService.enable = true;
-    dbus.packages = [pkgs.gcr];
-    udev.packages = with pkgs; [gnome.gnome-settings-daemon];
-    getty.autologinUser = "${user}";
-    gvfs.enable = true;
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      jack.enable = true;
     };
   };
 
@@ -157,27 +62,6 @@
         RestartSec = 1;
         TimeoutStopSec = 10;
       };
-    };
-  };
-
-  security = {
-    # unlock GPG keyring on login
-    pam.services.greetd.enableGnomeKeyring = true;
-
-    polkit.enable = true;
-
-    sudo = {
-      enable = true;
-      extraConfig = ''
-        ${user} ALL=(ALL) NOPASSWD:ALL
-      '';
-    };
-
-    doas = {
-      enable = false;
-      extraConfig = ''
-        permit nopass :wheel
-      '';
     };
   };
 }

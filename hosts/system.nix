@@ -1,9 +1,11 @@
 {
   pkgs,
   inputs,
+  user,
   ...
 }: {
   nixpkgs.system = "x86_64-linux";
+
   networking = {
     firewall = {
       enable = true;
@@ -22,14 +24,103 @@
       "185.199.108.133" = ["raw.githubusercontent.com"];
     };
   };
+
   time.timeZone = "Asia/Singapore";
 
-  i18n.defaultLocale = "en_GB.UTF-8";
+  i18n = {
+    defaultLocale = "en_GB.UTF-8";
 
-  security.rtkit.enable = true;
+    inputMethod = {
+      enabled = "fcitx5";
+      fcitx5 = {
+        addons = with pkgs; [
+          fcitx5-rime
+          fcitx5-chinese-addons
+          fcitx5-table-extra
+          fcitx5-pinyin-moegirl
+          fcitx5-pinyin-zhwiki
+        ];
+        waylandFrontend = true;
+      };
+    };
+  };
+
+  security = {
+    rtkit.enable = true;
+
+    # unlock GPG keyring on login
+    pam.services.greetd.enableGnomeKeyring = true;
+
+    polkit.enable = true;
+
+    sudo = {
+      enable = true;
+      extraConfig = ''
+        ${user} ALL=(ALL) NOPASSWD:ALL
+      '';
+    };
+
+    doas = {
+      enable = false;
+      extraConfig = ''
+        permit nopass :wheel
+      '';
+    };
+  };
+
+  boot = {
+    supportedFilesystems = ["ntfs"];
+    loader = {
+      grub = {
+        configurationLimit = 5;
+      };
+      systemd-boot = {
+        enable = true;
+        consoleMode = "auto";
+      };
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
+      timeout = 1;
+    };
+    kernelParams = [
+      "quiet"
+    ];
+    consoleLogLevel = 0;
+    initrd.verbose = false;
+  };
+
   services = {
+    dbus = {
+      enable = true;
+      packages = [pkgs.gcr];
+    };
+
     openssh = {
       enable = true;
+    };
+
+    gnome = {
+      gnome-keyring = {
+        enable = true;
+      };
+      evolution-data-server = {
+        enable = true;
+      };
+    };
+
+    passSecretService.enable = true;
+    udev.packages = with pkgs; [gnome.gnome-settings-daemon];
+    getty.autologinUser = "${user}";
+    gvfs.enable = true;
+
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
     };
   };
 
@@ -37,19 +128,42 @@
     binsh = "${pkgs.dash}/bin/dash";
     shells = with pkgs; [fish];
     systemPackages = with pkgs; [
+      alsa-lib
+      alsa-utils
+      brave
+      cinnamon.nemo
+      cliphist
+      direnv
+      flac
       gdu
+      gimp
       git
+      grim
+      imagemagick
+      inkscape
       killall
+      libnotify
       lsd
       neofetch
       neovim
+      networkmanagerapplet
+      pavucontrol
+      polkit_gnome
+      pulsemixer
       socat
-      wget
-      xdg-utils
+      swappy
+      swaynotificationcenter
       unzip
+      waypaper
+      wev
+      wf-recorder
+      wget
+      wl-clipboard
+      wlr-randr
+      xdg-utils
+      zoxide
     ];
   };
-  services.dbus.enable = true;
 
   nix = {
     settings = {
