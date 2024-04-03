@@ -4,9 +4,8 @@
   '';
   grimblast_anotate = pkgs.writeShellScriptBin "grimblast_anotate" ''
     FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
-    grimblast --notify --cursor copysave area $HOME/Pictures/$FILE >> /dev/null 2>&1
-    swappy -f $HOME/Pictures/$FILE
-    rm $HOME/Pictures/$FILE
+    grimblast --notify --cursor copysave area $HOME/Pictures/Screenshots/$FILE >> /dev/null 2>&1
+    swappy -f $HOME/Pictures/Screenshots/$FILE
   '';
   myswaylock = pkgs.writeShellScriptBin "myswaylock" ''
     swaylock  \
