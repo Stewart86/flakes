@@ -11,7 +11,7 @@
     exec-once = [
       "launch_waybar &"
       "swaync &"
-      "swww query || swww init"
+      "waypaper --restore"
       "nm-applet --indicator"
       "nextcloud --background"
       "blueman-applet"
