@@ -9,7 +9,7 @@
       "$mod,F,fullscreen"
       "$mod,Y,pin"
       "$mod, P, pseudo"
-      "$mod, ;, togglesplit,"
+      "$mod, simicolon, togglesplit,"
       "$mod, G, togglegroup,"
       "$mod, Tab, changegroupactive, f"
       "$mod SHIFT, G,exec,hyprctl --batch 'keyword general:gaps_out 20;keyword general:gaps_in 5'"
