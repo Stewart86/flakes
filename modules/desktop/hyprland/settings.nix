@@ -125,5 +125,12 @@
       animate_manual_resizes = true;
       enable_swallow = true;
     };
+
+    group = {
+      groupbar = {
+        "col.active" = "rgb(ffc0cb)";
+        "col.inactive" = "rgba(595959aa)";
+      };
+    };
   };
 }
