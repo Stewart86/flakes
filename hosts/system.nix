@@ -94,7 +94,10 @@
   services = {
     dbus = {
       enable = true;
-      packages = [pkgs.gcr];
+      packages = [
+        pkgs.gcr
+        gnome.gnome-settings-daemon
+      ];
     };
 
     openssh = {
