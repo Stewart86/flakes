@@ -94,8 +94,8 @@
   services = {
     dbus = {
       enable = true;
-      packages = [
-        pkgs.gcr
+      packages = with pkgs; [
+        gcr
         gnome.gnome-settings-daemon
       ];
     };
