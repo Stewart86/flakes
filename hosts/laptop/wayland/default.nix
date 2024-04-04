@@ -39,6 +39,8 @@
   programs = {
     hyprland.enable = true;
     fish.enable = true;
+    seahorse.enable = true;
+
     ssh.startAgent = true;
 
     evolution = {
