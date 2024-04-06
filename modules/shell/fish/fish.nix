@@ -17,7 +17,6 @@
     interactiveShellInit = ''
       oh-my-posh init fish --config ~/.config/fish/omp_theme/stewart.omp.json | source
       zoxide init --cmd cd fish | source
-      fish_add_path $HOME/.npm-global
     '';
   };
   home = {
