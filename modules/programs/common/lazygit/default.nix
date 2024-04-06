@@ -2,7 +2,6 @@
   home = {
     packages = with pkgs; [
       lazygit
-      cz-cli
       pkgs.commitizen
     ];
   };
