@@ -2,7 +2,6 @@
   home = {
     packages = with pkgs; [
       lazygit
-      pkgs.commitizen
     ];
   };
   home.file.".config/lazygit/config.yml".text = ''
