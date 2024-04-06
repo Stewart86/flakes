@@ -19,8 +19,6 @@ return {
 
   { import = "astrocommunity.git.git-blame-nvim" },
 
-  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
-
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
 
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
