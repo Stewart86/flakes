@@ -3,7 +3,6 @@
     packages = with pkgs; [
       lazygit
       pkgs.commitizen
-      pkgs.nodePackages."cz-emoji-conventional"
     ];
   };
   home.file.".config/lazygit/config.yml".text = ''
