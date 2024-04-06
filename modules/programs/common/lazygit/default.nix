@@ -3,8 +3,7 @@
     packages = with pkgs; [
       lazygit
       cz-cli
-      pkgs.nodePackages.commitizen
-      pkgs.nodePackages.cz-conventional-changelog
+      pkgs.commitizen
     ];
   };
   home.file.".config/lazygit/config.yml".text = ''
