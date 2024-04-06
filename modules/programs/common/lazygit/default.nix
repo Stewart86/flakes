@@ -4,6 +4,9 @@
       lazygit
     ];
   };
+  home.sessionPath = [
+    "\${HOME}/.npm-global/bin"
+  ];
   home.file.".config/lazygit/config.yml".text = ''
     customCommands:
       - key: "C"
