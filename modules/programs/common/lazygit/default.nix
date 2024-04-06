@@ -9,7 +9,7 @@
     customCommands:
       - key: "C"
         command: "git cz"
-        description: "commit with commitizen"
+        description: "commit with commitizen (cz-emoji-conventional)"
         context: "files"
         loadingText: "opening commitizen commit tool"
         subprocess: true
