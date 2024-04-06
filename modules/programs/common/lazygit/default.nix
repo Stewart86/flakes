@@ -5,7 +5,7 @@
     ];
   };
   home.sessionPath = [
-    "\${HOME}/.npm-global/bin"
+    "$HOME/.npm-global/bin"
   ];
   home.file.".config/lazygit/config.yml".text = ''
     customCommands:
