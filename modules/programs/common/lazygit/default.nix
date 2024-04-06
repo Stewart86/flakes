@@ -3,13 +3,15 @@
     packages = with pkgs; [
       lazygit
       cz-cli
+      pkgs.nodePackages.commitizen
+      pkgs.nodePackages.cz-conventional-changelog
     ];
   };
   home.file.".config/lazygit/config.yml".text = ''
     customCommands:
       - key: "C"
         command: "git cz"
-        description: "commit with commitizen cz-cli"
+        description: "commit with commitizen"
         context: "files"
         loadingText: "opening commitizen commit tool"
         subprocess: true
