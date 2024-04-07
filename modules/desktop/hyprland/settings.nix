@@ -12,6 +12,7 @@
       "launch_waybar &"
       "swaync &"
       # "waypaper --restore"
+      "swww query || swww init --format xrgb"
       "nm-applet --indicator"
       "nextcloud --background"
       "blueman-applet"
