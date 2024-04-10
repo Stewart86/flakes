@@ -110,7 +110,7 @@
       ", XF86AudioNext,exec, mpc -q next "
       ", XF86AudioPrev,exec, mpc -q prev"
 
-      "$mod,O,exec,killall -SIGUSR1 .waybar-wrapped"
+      "$mod,O,exec, launch_waybar"
 
       "CTRL SHIFT, left, resizeactive,-15 0"
       "CTRL SHIFT, right, resizeactive,15 0"
