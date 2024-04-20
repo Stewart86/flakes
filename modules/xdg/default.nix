@@ -25,7 +25,7 @@
     "x-scheme-handler/discord" = ["discordcanary.desktop"];
     "x-scheme-handler/spotify" = ["spotify.desktop"];
     "x-scheme-handler/tg" = ["telegramdesktop.desktop"];
-    "x-scheme-handler/mailto" = ["userapp-Evolution-KTEE41.desktop"];
+    # "x-scheme-handler/mailto" = ["userapp-Evolution-KTEE41.desktop"];
     "x-scheme-handler/ytmd" = ["youtube-music-desktop-app.desktop"];
   };
 in {

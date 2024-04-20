@@ -43,10 +43,10 @@
 
     ssh.startAgent = true;
 
-    evolution = {
-      enable = true;
-      plugins = [pkgs.evolution-ews];
-    };
+    # evolution = {
+    #   enable = true;
+    #   plugins = [pkgs.evolution-ews];
+    # };
   };
 
   virtualisation.docker.enable = true;
