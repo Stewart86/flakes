@@ -9,7 +9,6 @@
     enable = true;
     systemd.enable = true;
     xwayland.enable = true;
-    enableNvidiaPatches = false;
     extraConfig = builtins.readFile ./hyprland.conf;
 
     systemd = {
