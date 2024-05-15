@@ -56,6 +56,4 @@
       zig
     ];
   };
-
-  home.file.".config/nvim".source = pkgs.astronvim-config;
 }
