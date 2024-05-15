@@ -18,7 +18,7 @@ stdenv.mkDerivation {
         ]))
       .dependencies;
   }}/parser";
-
+  src = ./config;
   user_config = ./config;
 
   buildPhase = ''
