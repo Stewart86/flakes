@@ -2,18 +2,10 @@
   pkgs,
   stdenv,
   lib,
-  fetchFromGitHub,
 }:
 stdenv.mkDerivation {
   pname = "astronvim-config";
-  version = "20240223";
-
-  src = fetchFromGitHub {
-    owner = "astronvim";
-    repo = "astronvim";
-    rev = "v4.7.0";
-    hash = "sha256-f9gWfw4RSa9lSIpevGGnXbUbPctC7C1bpgyXD1OzeHY=";
-  };
+  version = "20240515";
 
   parser = "${pkgs.symlinkJoin {
     name = "treesitter-parsers";
@@ -33,9 +25,7 @@ stdenv.mkDerivation {
     ls
     mkdir parser
     cp -r $parser/* parser
-    mkdir lua/user
-    cp -r $user_config/* lua/user
-    ls lua/user
+    cp -r $user_config/* .
   '';
 
   installPhase = ''
