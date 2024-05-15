@@ -8,7 +8,7 @@
 
       withPython3 = true;
       withNodeJs = true;
-      withRuby = false;
+      withRuby = true;
 
       # extraPackages = with pkgs; [ ];
       plugins = with pkgs.vimPlugins; [
@@ -27,12 +27,14 @@
       vscode-langservers-extracted
       nodePackages.jsonlint
       luajitPackages.luacheck
+      python3
       nil
       lua-language-server
       pyright
       rust-analyzer
       deadnix
       marksman
+      selene
       # taplo
       #-- tree-sitter --#
       tree-sitter
