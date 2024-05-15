@@ -1,5 +1,0 @@
-return {
-  ActiveTS = "🌴",
-  ActiveLSP = "🚩",
-  MacroRecording = "📽️",
-}
