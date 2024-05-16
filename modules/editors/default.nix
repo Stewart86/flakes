@@ -34,6 +34,7 @@
       rust-analyzer
       deadnix
       marksman
+      markdownliint-cli
       selene
       # taplo
       #-- tree-sitter --#
