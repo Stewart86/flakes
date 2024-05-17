@@ -34,7 +34,7 @@
         tab_size = 2;
         max_width = 600;
         max_height = 900;
-        cache_dir = "${config.home}/.cache/";
+        cache_dir = "\${HOME}/.cache/";
       };
     };
   };
