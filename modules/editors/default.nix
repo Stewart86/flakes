@@ -36,7 +36,8 @@
       marksman
       markdownlint-cli
       selene
-      # taplo
+      taplo
+      yaml-language-server
       #-- tree-sitter --#
       tree-sitter
       #-- format --#
