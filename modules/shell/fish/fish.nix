@@ -26,6 +26,7 @@
     ];
   };
   home.file.".config/fish/functions/n.fish".source = ./functions/n.fish;
+  home.file.".config/fish/functions/yy.fish".source = ./functions/yy.fish;
   home.file.".config/fish/functions/sd.fish".source = ./functions/sd.fish;
   home.file.".config/fish/functions/vsd.fish".source = ./functions/vsd.fish;
   home.file.".config/fish/functions/random_wall.fish".source = ./functions/random_wall.fish;
