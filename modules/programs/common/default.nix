@@ -12,6 +12,7 @@
   ./search
   ./swappy
   ./xdg
+  ./yazi
   ./yt-dlp
   ./zathura
 ]
