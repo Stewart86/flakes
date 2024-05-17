@@ -29,7 +29,6 @@
             inherit system;
             overlays = [
               self.overlays.default
-              yazi.overlays.default
             ];
           };
         in
