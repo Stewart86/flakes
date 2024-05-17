@@ -16,6 +16,8 @@
   programs.yazi = {
     enable = true;
 
+    package = pkgs.yazi.packages.${pkgs.system}.default;
+
     enableFishIntegration = true;
 
     settings = {
