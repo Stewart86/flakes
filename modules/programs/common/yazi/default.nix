@@ -1,5 +1,6 @@
 { config
 , pkgs
+, yazi
 , ...
 }: {
   imports = [
@@ -16,7 +17,7 @@
   programs.yazi = {
     enable = true;
 
-    package = pkgs.yazi.packages.${pkgs.system}.default;
+    package = yazi.packages.${pkgs.system}.default;
 
     enableFishIntegration = true;
 
