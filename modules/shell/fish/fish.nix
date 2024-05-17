@@ -1,11 +1,12 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   programs.fish = {
     enable = true;
-    shellAliases = {};
+    shellAliases = { };
     shellAbbrs = {
       ls = "lsd -A";
       ll = "lsd -l -A";
       tree = "lsd --tree";
+      cd = "z";
 
       # Git
       gc = "git add . && git commit -m ";
@@ -16,7 +17,7 @@
     };
     interactiveShellInit = ''
       oh-my-posh init fish --config ~/.config/fish/omp_theme/stewart.omp.json | source
-      zoxide init --cmd cd fish | source
+      zoxide init fish | source
     '';
   };
   home = {
