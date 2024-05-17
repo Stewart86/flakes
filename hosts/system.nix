@@ -1,15 +1,14 @@
-{
-  pkgs,
-  inputs,
-  user,
-  ...
+{ pkgs
+, inputs
+, user
+, ...
 }: {
   nixpkgs.system = "x86_64-linux";
 
   networking = {
     firewall = {
       enable = true;
-      allowedTCPPorts = [80 442];
+      allowedTCPPorts = [ 80 442 ];
       # allowedUDPPortRanges = [
       #   { from = 4000; to = 4007; }
       #   { from = 8000; to = 8010; }
@@ -18,10 +17,10 @@
     hostName = "surface-nix";
     networkmanager.enable = true;
     hosts = {
-      "185.199.109.133" = ["raw.githubusercontent.com"];
-      "185.199.111.133" = ["raw.githubusercontent.com"];
-      "185.199.110.133" = ["raw.githubusercontent.com"];
-      "185.199.108.133" = ["raw.githubusercontent.com"];
+      "185.199.109.133" = [ "raw.githubusercontent.com" ];
+      "185.199.111.133" = [ "raw.githubusercontent.com" ];
+      "185.199.110.133" = [ "raw.githubusercontent.com" ];
+      "185.199.108.133" = [ "raw.githubusercontent.com" ];
     };
   };
 
@@ -69,7 +68,7 @@
   };
 
   boot = {
-    supportedFilesystems = ["ntfs"];
+    supportedFilesystems = [ "ntfs" ];
     loader = {
       grub = {
         configurationLimit = 5;
@@ -114,7 +113,7 @@
     };
 
     passSecretService.enable = true;
-    udev.packages = with pkgs; [gnome.gnome-settings-daemon];
+    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
     getty.autologinUser = "${user}";
     gvfs.enable = true;
 
@@ -129,7 +128,7 @@
 
   environment = {
     binsh = "${pkgs.dash}/bin/dash";
-    shells = with pkgs; [fish];
+    shells = with pkgs; [ fish ];
     systemPackages = with pkgs; [
       alsa-lib
       alsa-utils
@@ -174,11 +173,13 @@
         "https://cache.nixos.org?priority=10"
         "https://hyprland.cachix.org"
         "https://nix-community.cachix.org"
+        "https://yazi.cachix.org"
       ];
       trusted-public-keys = [
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
       ];
       auto-optimise-store = true;
     };

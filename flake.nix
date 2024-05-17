@@ -16,7 +16,7 @@
       nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     };
 
-  outputs = inputs @ { self, nixpkgs, flake-utils, ... }:
+  outputs = inputs @ { self, nixpkgs, flake-utils, yazi, ... }:
     let
       user = "stewart";
       selfPkgs = import ./pkgs;
@@ -29,6 +29,7 @@
             inherit system;
             overlays = [
               self.overlays.default
+              yazi.overlays.default
             ];
           };
         in
