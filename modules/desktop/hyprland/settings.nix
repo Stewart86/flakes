@@ -112,6 +112,8 @@
     misc = {
       # disable auto polling for config file changes
       disable_autoreload = true;
+      disable_splash_rendering = true;
+
 
       force_default_wallpaper = 0;
 
