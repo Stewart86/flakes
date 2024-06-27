@@ -12,8 +12,6 @@
       "$mod, simicolon, layoutmsg, togglesplit"
       "$mod, G, togglegroup"
       "$mod, Tab, changegroupactive, f"
-      "$mod SHIFT, G,exec,hyprctl --batch 'keyword general:gaps_out 20;keyword general:gaps_in 5'"
-      "$mod, G,exec,hyprctl --batch 'keyword general:gaps_out 0;keyword general:gaps_in 0'"
 
       "$mod, left, movefocus, l"
       "$mod, right, movefocus, r"
