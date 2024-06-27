@@ -1,7 +1,6 @@
-{
-  pkgs,
-  user,
-  ...
+{ pkgs
+, user
+, ...
 }: {
   imports =
     (import ../../../modules/hardware)
@@ -12,11 +11,10 @@
     ++ [
       ../../../modules/desktop/hyprland
     ]
-    ++ [(import ../../../modules/greetd)];
+    ++ [ (import ../../../modules/greetd) ];
 
   microsoft-surface = {
     kernelVersion = "6.6.13";
-    ipts.enable = false;
     surface-control.enable = true;
   };
 
@@ -30,7 +28,7 @@
     initialHashedPassword = "$6$88FQ7FvPTjgmlVtw$xqY5.Ux1WPJniFpukO6RAtbLVf6XXTU2ulU6zvmiuU/lhtKIIFZux2IrQ2al/nd3zPWvJ1OEk0c8m5ACoVAtM.";
     shell = pkgs.fish;
     isNormalUser = true;
-    extraGroups = ["wheel" "video" "audio" "docker"];
+    extraGroups = [ "wheel" "video" "audio" "docker" ];
     packages = with pkgs; [
       nextcloud-client
     ];
@@ -54,9 +52,9 @@
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
-      wantedBy = ["graphical-session.target"];
-      wants = ["graphical-session.target"];
-      after = ["graphical-session.target"];
+      wantedBy = [ "graphical-session.target" ];
+      wants = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
       serviceConfig = {
         Type = "simple";
         ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
