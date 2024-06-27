@@ -15,7 +15,6 @@
 
   microsoft-surface = {
     kernelVersion = "6.6.13";
-    surface-control.enable = true;
   };
 
   hardware.opengl = {

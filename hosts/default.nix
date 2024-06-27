@@ -14,7 +14,7 @@ in
       ./system.nix
     ] ++ [
       inputs.home-manager.nixosModules.home-manager
-      inputs.nixos-hardware.nixosModules.microsoft-surface-common
+      inputs.nixos-hardware.nixosModules.microsoft-surface-surface-pro-intel
       {
         home-manager = {
           useGlobalPkgs = true;
