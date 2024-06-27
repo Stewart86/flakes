@@ -19,7 +19,6 @@
       "fcitx5 --replace -d"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
-      "hyprctl dispatch workspace 2"
     ];
 
     input = {
@@ -114,17 +113,11 @@
       disable_autoreload = true;
       disable_splash_rendering = true;
 
-
       force_default_wallpaper = 0;
 
       # disable dragging animation
-      animate_mouse_windowdragging = false;
+      animate_mouse_windowdragging = true;
 
-      # enable variable refresh rate (effective depending on hardware)
-      vrr = 1;
-
-      # we do, in fact, want direct scanout
-      no_direct_scanout = false;
       animate_manual_resizes = true;
       enable_swallow = true;
       swallow_regex = "^(kitty)$";
