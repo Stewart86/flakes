@@ -18,7 +18,6 @@
   };
 
   hardware.opengl = {
-    driSupport = true;
     enable = true;
   };
 
