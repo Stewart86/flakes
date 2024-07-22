@@ -17,7 +17,7 @@
     kernelVersion = "6.6.13";
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
 

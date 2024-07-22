@@ -12,7 +12,7 @@ stdenv.mkDerivation {
   };
 
   propagatedUserEnvPkgs = with pkgs; [
-    gnome.gnome-themes-extra
+    pkgs.gnome-themes-extra
     gtk-engine-murrine
   ];
 
