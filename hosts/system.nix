@@ -96,7 +96,7 @@
       enable = true;
       packages = with pkgs; [
         gcr
-        gnome.gnome-settings-daemon
+        gnome-settings-daemon
       ];
     };
 
