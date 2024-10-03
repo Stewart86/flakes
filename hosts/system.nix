@@ -114,7 +114,7 @@
     };
 
     passSecretService.enable = true;
-    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+    udev.packages = with pkgs; [ gnome-settings-daemon ];
     getty.autologinUser = "${user}";
     gvfs.enable = true;
 
@@ -134,7 +134,7 @@
       alsa-lib
       alsa-utils
       brave
-      cinnamon.nemo
+      nemo
       cliphist
       direnv
       flac
