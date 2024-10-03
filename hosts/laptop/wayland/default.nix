@@ -14,7 +14,7 @@
     ++ [ (import ../../../modules/greetd) ];
 
   microsoft-surface = {
-    kernelVersion = "6.6.13";
+    kernelVersion = "6.10";
   };
 
   hardware.graphics = {
