@@ -28,8 +28,8 @@ in
         };
         nixpkgs = {
           overlays =
-            (import ../overlays)
-              ++ [
+            # (import ../overlays) ++ 
+            [
               self.overlays.default
             ];
         };
