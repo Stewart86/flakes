@@ -26,10 +26,10 @@
       nodePackages_latest."@tailwindcss/language-server"
       vscode-langservers-extracted
       nodePackages.jsonlint
-      luajitPackages.luacheck
+      # luajitPackages.luacheck
       python3
       nil
-      lua-language-server
+      # lua-language-server
       pyright
       rust-analyzer
       deadnix
@@ -56,7 +56,7 @@
       mypy
       cargo
       rustc
-      luarocks
+      # luarocks
       zig
     ];
   };
