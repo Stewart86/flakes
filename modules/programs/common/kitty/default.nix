@@ -2,8 +2,8 @@
   programs = {
     kitty = {
       enable = true;
-      environment = {};
-      keybindings = {};
+      environment = { };
+      keybindings = { };
       settings = {
         allow_remote_control = true;
         listen_on = "unix:/tmp/kitty";
@@ -35,7 +35,7 @@
       font.name = "jetbrains mono nerd font";
       font.size = 10;
 
-      theme = "Catppuccin-Mocha";
+      themeFile = "Catppuccin-Mocha";
     };
   };
 }
