@@ -29,7 +29,7 @@
       # luajitPackages.luacheck
       python3
       nil
-      # lua-language-server
+      lua-language-server
       pyright
       rust-analyzer
       deadnix
