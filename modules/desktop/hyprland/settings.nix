@@ -6,6 +6,7 @@
       "desc:Dell Inc. DELL U2515H 01N564B301CL, highres, -2560x0, auto"
       "desc:Dell Inc. DELL U2719D 4MHFSS2, highres, 0x0, auto"
       "eDP-1, highres, 2560x0, auto"
+      "DP-1, highres, 2560x0, auto"
     ];
 
     exec-once = [
